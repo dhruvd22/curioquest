@@ -10,7 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate-content.ts",
-    "audit": "node scripts/audit-content.js"
+    "audit": "tsx scripts/audit-content.ts"
   },
   "dependencies": {
     "next": "14.2.5",
