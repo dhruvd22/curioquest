@@ -7,15 +7,15 @@ const TOPICS_FILE = path.join(process.cwd(), 'content', 'topics.json');
 
 export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
   name: 'Packager',
-  async run({ slug, topic, draft, sources }) {
+  async run({ slug, topic, draft, sources, images }) {
     const story = {
       slug,
       title: draft.title,
       ageBand: '10-13',
       readingLevel: 'grade-6',
       estReadMin: 6,
-      heroImage: { file: `/assets/${slug}/hero.webp`, alt: `${topic} hero` },
-      supportImages: [],
+      heroImage: images.hero,
+      supportImages: images.supports,
       sources,
       phases: draft.phases,
       badges: [],
@@ -28,17 +28,23 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
 
     const topicsArr = JSON.parse(await fs.readFile(TOPICS_FILE, 'utf8'));
     if (!topicsArr.find((t: any) => t.slug === slug)) {
-      topicsArr.push({ slug, title: topic, thumbnail: `/assets/${slug}/hero.webp`, badges: [] });
+      topicsArr.push({ slug, title: topic, thumbnail: images.hero.file, badges: [] });
       await fs.writeFile(TOPICS_FILE, JSON.stringify(topicsArr, null, 2), 'utf8');
     }
 
     const assetDir = path.join(process.cwd(), 'public', 'assets', slug);
     await fs.mkdir(assetDir, { recursive: true });
-    const heroPath = path.join(assetDir, 'hero.webp');
-    try {
-      await fs.access(heroPath);
-    } catch {
-      await fs.writeFile(heroPath, '');
+    const ensure = async (file: string) => {
+      const p = path.join(assetDir, file);
+      try {
+        await fs.access(p);
+      } catch {
+        await fs.writeFile(p, '');
+      }
+    };
+    await ensure(path.basename(images.hero.file));
+    for (const s of images.supports) {
+      await ensure(path.basename(s.file));
     }
 
     await fs.mkdir(`/tmp/${slug}`, { recursive: true });

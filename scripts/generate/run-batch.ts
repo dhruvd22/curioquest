@@ -8,6 +8,8 @@ import { SafetyAgent } from './agents/safety';
 import { VerifierAgent } from './agents/verifier';
 import { JudgeAgent } from './agents/judge';
 import { PackagerAgent } from './agents/packager';
+import { IllustratorPromptAgent } from './agents/illustratorPrompt';
+import { renderImage } from './imageRender'; // optional image rendering helper
 
 const CONTENT = path.join(process.cwd(), 'content', 'stories');
 
@@ -15,7 +17,9 @@ function log(...msg: any[]) {
   console.log(new Date().toISOString(), ...msg);
 }
 
-async function runTopic(topic: string, force: boolean) {
+type ImageMode = 'render' | 'stock' | 'skip';
+
+async function runTopic(topic: string, force: boolean, imageMode: ImageMode) {
   const curator = await CuratorAgent.run({ topic });
   const { slug } = curator;
   const finalPath = path.join(CONTENT, `${slug}.json`);
@@ -66,7 +70,40 @@ async function runTopic(topic: string, force: boolean) {
 
   const judge = await JudgeAgent.run({ slug, drafts: verifiedDrafts });
   const finalDraft = verifiedDrafts[judge.chosenIndex] || verifiedDrafts[0];
-  await PackagerAgent.run({ slug, topic, draft: finalDraft, sources: outline.sources });
+
+  const assetDir = path.join(process.cwd(), 'public', 'assets', slug);
+  await fs.mkdir(assetDir, { recursive: true });
+  const heroFile = path.join(assetDir, 'hero.webp');
+
+  let images = {
+    hero: { file: `/assets/${slug}/hero.webp`, alt: `${topic} hero` },
+    supports: [] as { file: string; alt: string }[],
+  };
+
+  if (imageMode !== 'skip') {
+    const art = await IllustratorPromptAgent.run({ slug, story: finalDraft });
+    images.hero.alt = art.hero.alt;
+    if (imageMode === 'render' && art.hero.license === 'render') {
+      await renderImage(art.hero.prompt, heroFile);
+    } else {
+      try { await fs.access(heroFile); } catch { await fs.writeFile(heroFile, ''); }
+    }
+    for (let i = 0; i < Math.min(2, art.supports.length); i++) {
+      const img = art.supports[i];
+      const fname = `support-${i + 1}.webp`;
+      const fpath = path.join(assetDir, fname);
+      if (imageMode === 'render' && img.license === 'render') {
+        await renderImage(img.prompt, fpath);
+      } else {
+        try { await fs.access(fpath); } catch { await fs.writeFile(fpath, ''); }
+      }
+      images.supports.push({ file: `/assets/${slug}/${fname}`, alt: img.alt });
+    }
+  } else {
+    try { await fs.access(heroFile); } catch { await fs.writeFile(heroFile, ''); }
+  }
+
+  await PackagerAgent.run({ slug, topic, draft: finalDraft, sources: outline.sources, images });
   log('Generated:', slug);
 }
 
@@ -74,6 +111,8 @@ async function main() {
   const args = process.argv.slice(2);
   const force = args.includes('--force');
   const topicIdx = args.indexOf('--topic');
+  const imgArg = args.find((a) => a.startsWith('--images='));
+  const imageMode = (imgArg ? imgArg.split('=')[1] : 'skip') as ImageMode;
   let topics: string[] = [];
   if (topicIdx >= 0 && args[topicIdx + 1]) {
     topics = [args[topicIdx + 1]];
@@ -85,7 +124,7 @@ async function main() {
   }
 
   for (const topic of topics) {
-    await runTopic(topic, force);
+    await runTopic(topic, force, imageMode);
   }
 }
 

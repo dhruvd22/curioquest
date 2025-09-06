@@ -1,14 +1,16 @@
 import { logCall } from "./logging";
 
 let client: any = null;
-try {
-  if (process.env.OPENAI_API_KEY) {
+async function loadClient() {
+  if (client || !process.env.OPENAI_API_KEY) return client;
+  try {
     const mod = await import('openai');
     const OpenAI = mod.default;
     client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  } catch {
+    client = null;
   }
-} catch {
-  client = null;
+  return client;
 }
 
 function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
@@ -35,10 +37,11 @@ export async function callResponse(args: {
   const start = Date.now();
   const temperature = args.temperature ?? 0.9;
   const inputChars = args.instructions.length + (typeof args.input === "string" ? args.input.length : args.input.reduce((n,m)=>n+m.content.length,0));
-  if (!client) {
+  const cli = await loadClient();
+  if (!cli) {
     return { text: '', ms: 0, raw: null };
   }
-  const res = await withBackoff(() => client.responses.create({
+  const res = await withBackoff(() => cli.responses.create({
     model: "gpt-4o-mini",
     instructions: args.instructions,
     input: typeof args.input === "string" ? [{role:"user", content: args.input}] : args.input,
