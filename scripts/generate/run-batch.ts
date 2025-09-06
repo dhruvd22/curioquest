@@ -194,6 +194,7 @@ function displayProgress(records: RecordEntry[]) {
 async function main() {
   const args = process.argv.slice(2);
   const force = args.includes('--force');
+  const all = args.includes('--all');
   const topicIdx = args.indexOf('--topic');
   const imgArg = args.find((a) => a.startsWith('--images='));
   const imageMode = (imgArg ? imgArg.split('=')[1] : 'skip') as ImageMode;
@@ -222,7 +223,7 @@ async function main() {
 
   const records: RecordEntry[] = seedTopics.map((t) => ({
     topic: t,
-    status: !force && checkpointSet.has(t) ? 'skipped' : 'pending',
+    status: !force && !all && checkpointSet.has(t) ? 'skipped' : 'pending',
   }));
 
   const topicsToRun = records.filter((r) => r.status === 'pending');
