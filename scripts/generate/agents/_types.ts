@@ -46,5 +46,6 @@ export type PackagerInput = {
     hero: { file: string; alt: string };
     supports: { file: string; alt: string }[];
   };
+  reviewMode?: boolean;
 };
 export type PackagerOutput = { path: string };

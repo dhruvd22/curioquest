@@ -11,7 +11,11 @@
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate-content.ts",
     "audit": "tsx scripts/audit-content.ts",
-    "generate": "tsx scripts/generate/run-batch.ts"
+    "generate": "tsx scripts/generate/run-batch.ts",
+    "generate:review": "tsx scripts/generate/run-batch.ts --all --images=skip --review-mode",
+    "review:diff": "tsx scripts/review/make-diff.ts --all",
+    "approve": "tsx scripts/review/approve.ts",
+    "publish": "tsx scripts/review/publish.ts --slug"
   },
   "dependencies": {
     "next": "14.2.5",

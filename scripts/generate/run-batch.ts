@@ -29,7 +29,12 @@ interface RunResult {
   timings: Record<string, number>;
 }
 
-async function runTopic(topic: string, force: boolean, imageMode: ImageMode): Promise<RunResult> {
+async function runTopic(
+  topic: string,
+  force: boolean,
+  imageMode: ImageMode,
+  reviewMode: boolean
+): Promise<RunResult> {
   const timings: Record<string, number> = {};
   let tokensOut = 0;
   const start = Date.now();
@@ -160,7 +165,14 @@ async function runTopic(topic: string, force: boolean, imageMode: ImageMode): Pr
   }
 
   const packagerStart = Date.now();
-  await PackagerAgent.run({ slug, topic, draft: finalDraft, sources: outline.sources, images });
+  await PackagerAgent.run({
+    slug,
+    topic,
+    draft: finalDraft,
+    sources: outline.sources,
+    images,
+    reviewMode,
+  });
   timings.PackagerAgent = Date.now() - packagerStart;
 
   log('Generated:', slug);
@@ -204,6 +216,8 @@ async function main() {
   const maxMsPerTopic = maxMsArg ? parseInt(maxMsArg.split('=')[1], 10) : Infinity;
   const maxCharsArg = args.find((a) => a.startsWith('--max-chars='));
   const maxChars = maxCharsArg ? parseInt(maxCharsArg.split('=')[1], 10) : Infinity;
+  const reviewArg = args.find((a) => a.startsWith('--review-mode'));
+  const reviewMode = reviewArg ? reviewArg.split('=')[1] !== 'false' : true;
 
   let seedTopics: string[] = [];
   if (topicIdx >= 0 && args[topicIdx + 1]) {
@@ -253,9 +267,9 @@ async function main() {
       displayProgress(records);
       const run =
         maxMsPerTopic === Infinity
-          ? await runTopic(current.topic, force, imageMode)
+          ? await runTopic(current.topic, force, imageMode, reviewMode)
           : await Promise.race([
-              runTopic(current.topic, force, imageMode),
+              runTopic(current.topic, force, imageMode, reviewMode),
               new Promise<RunResult>((resolve) =>
                 setTimeout(
                   () =>
