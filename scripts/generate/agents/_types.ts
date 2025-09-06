@@ -25,7 +25,8 @@ export type StoryInput = OutlineOutput & { slug: string; topic: string };
 export type StoryDraft = { phases: any[]; title: string };
 
 export type IllustratorPromptInput = { slug: string; story: StoryDraft };
-export type IllustratorPromptOutput = { prompt: string };
+export type ImagePrompt = { prompt: string; alt: string; license: 'render' | 'stock' };
+export type IllustratorPromptOutput = { hero: ImagePrompt; supports: ImagePrompt[] };
 
 export type SafetyInput = { slug: string; draft: StoryDraft };
 export type SafetyOutput = { ok: boolean; draft: StoryDraft; changes: string[] };
@@ -41,5 +42,9 @@ export type PackagerInput = {
   topic: string;
   draft: StoryDraft;
   sources: { id: string; name: string; url: string }[];
+  images: {
+    hero: { file: string; alt: string };
+    supports: { file: string; alt: string }[];
+  };
 };
 export type PackagerOutput = { path: string };
