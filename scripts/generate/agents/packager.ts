@@ -7,7 +7,7 @@ const TOPICS_FILE = path.join(process.cwd(), 'content', 'topics.json');
 
 export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
   name: 'Packager',
-  async run({ slug, topic, draft }) {
+  async run({ slug, topic, draft, sources }) {
     const story = {
       slug,
       title: draft.title,
@@ -16,7 +16,7 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
       estReadMin: 6,
       heroImage: { file: `/assets/${slug}/hero.webp`, alt: `${topic} hero` },
       supportImages: [],
-      sources: [{ id: 's1', name: 'StubSource', url: 'https://example.com' }],
+      sources,
       phases: draft.phases,
       badges: [],
       crossLinks: [],
