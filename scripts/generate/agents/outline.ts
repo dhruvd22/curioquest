@@ -6,6 +6,14 @@ import { Agent, OutlineInput, OutlineOutput } from './_types';
 export const OutlineAgent: Agent<OutlineInput, OutlineOutput> = {
   name: 'Outline',
   async run({ slug, topic, facts, sources }) {
+    if (!process.env.OPENAI_API_KEY) {
+      const factGems = facts.slice(0, 3).map((f) => ({ sourceId: f.sourceId, text: f.claim }));
+      const output: OutlineOutput = { phases: [], factGems, sources };
+      await fs.mkdir(`/tmp/${slug}`, { recursive: true });
+      await fs.writeFile(`/tmp/${slug}/outline.json`, JSON.stringify(output, null, 2), 'utf8');
+      return output;
+    }
+
     const prompt = `Topic: ${topic}\nFacts (JSON): ${JSON.stringify(
       facts,
       null,

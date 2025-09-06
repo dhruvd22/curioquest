@@ -27,14 +27,19 @@ export type StoryDraft = { phases: any[]; title: string };
 export type IllustratorPromptInput = { slug: string; story: StoryDraft };
 export type IllustratorPromptOutput = { prompt: string };
 
-export type SafetyInput = { slug: string; story: StoryDraft };
-export type SafetyOutput = { ok: boolean };
+export type SafetyInput = { slug: string; draft: StoryDraft };
+export type SafetyOutput = { ok: boolean; draft: StoryDraft; changes: string[] };
 
-export type VerifierInput = { slug: string; story: StoryDraft };
-export type VerifierOutput = { verified: boolean };
+export type VerifierInput = { slug: string; draft: StoryDraft };
+export type VerifierOutput = { verified: boolean; draft: StoryDraft };
 
 export type JudgeInput = { slug: string; drafts: StoryDraft[] };
 export type JudgeOutput = { chosenIndex: number; scores: number[] };
 
-export type PackagerInput = { slug: string; topic: string; draft: StoryDraft };
+export type PackagerInput = {
+  slug: string;
+  topic: string;
+  draft: StoryDraft;
+  sources: { id: string; name: string; url: string }[];
+};
 export type PackagerOutput = { path: string };

@@ -1,3 +1,16 @@
 [
-  { "slug": "example", "title": "Example Topic", "thumbnail": "/assets/example/hero.webp", "badges": ["DEMO"] }
+  {
+    "slug": "example",
+    "title": "Example Topic",
+    "thumbnail": "/assets/example/hero.webp",
+    "badges": [
+      "DEMO"
+    ]
+  },
+  {
+    "slug": "rockets",
+    "title": "Rockets",
+    "thumbnail": "/assets/rockets/hero.webp",
+    "badges": []
+  }
 ]
