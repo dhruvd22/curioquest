@@ -9,14 +9,15 @@ export type CuratorOutput = {
 };
 
 export type ResearchOutput = {
-  facts: { claim: string; sourceId: string; sourceName: string; url: string }[];
+  facts: { claim: string; quote: string; sourceId: string; sourceName: string; url: string }[];
   sources: { id: string; name: string; url: string }[];
 };
-export type ResearchInput = CuratorOutput;
+export type ResearchInput = { topic: string; subAngles?: string[]; slug: string };
 
-export type OutlineInput = ResearchOutput & { slug: string };
+export type OutlineInput = ResearchOutput & { slug: string; topic: string };
 export type OutlineOutput = {
   phases: any[];
+  factGems: { sourceId: string; text: string }[];
   sources: { id: string; name: string; url: string }[];
 };
 

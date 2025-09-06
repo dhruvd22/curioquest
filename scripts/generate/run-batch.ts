@@ -4,11 +4,6 @@ import { CuratorAgent } from './agents/curator';
 import { ResearchAgent } from './agents/research';
 import { OutlineAgent } from './agents/outline';
 import { StoryAgent } from './agents/story';
-import { IllustratorPromptAgent } from './agents/illustratorPrompt';
-import { SafetyAgent } from './agents/safety';
-import { VerifierAgent } from './agents/verifier';
-import { JudgeAgent } from './agents/judge';
-import { PackagerAgent } from './agents/packager';
 
 const CONTENT = path.join(process.cwd(), 'content', 'stories');
 
@@ -29,15 +24,9 @@ async function runTopic(topic: string, force: boolean) {
   }
 
   log('Start:', slug);
-  const research = await ResearchAgent.run(curator);
-  const outline = await OutlineAgent.run({ slug, ...research });
-  const draft = await StoryAgent.run({ slug, topic, ...outline });
-  await IllustratorPromptAgent.run({ slug, story: draft });
-  await SafetyAgent.run({ slug, story: draft });
-  await VerifierAgent.run({ slug, story: draft });
-  const judge = await JudgeAgent.run({ slug, drafts: [draft] });
-  const chosen = [draft][judge.chosenIndex];
-  await PackagerAgent.run({ slug, topic, draft: chosen });
+  const research = await ResearchAgent.run({ slug, topic, subAngles: curator.subAngles });
+  const outline = await OutlineAgent.run({ slug, topic, ...research });
+  await StoryAgent.run({ slug, topic, ...outline });
   log('Generated:', slug);
 }
 
