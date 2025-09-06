@@ -12,8 +12,17 @@
     { "type": "orientation", "heading": "Where we begin", "body": "..." },
     { "type": "discovery", "heading": "Finding clues", "body": "..." },
     { "type": "wow-panel", "heading": "Mind-blower", "body": "..." },
-    { "type": "fact-gems", "items": [ { "sourceId": "s1", "text": "Short fact." }, { "sourceId": "s2", "text": "Another fact." }, { "sourceId": "s3", "text": "Third fact." } ] },
-    { "type": "mini-quiz", "items": [ { "q": "What is 1+1?", "choices": ["2","3"], "answer": 0 } ] },
+    { "type": "fact-gems", "items": [
+        { "sourceId": "s1", "text": "Short fact." },
+        { "sourceId": "s2", "text": "Another fact." },
+        { "sourceId": "s3", "text": "Third fact." }
+      ]
+    },
+    { "type": "mini-quiz", "items": [
+        { "q": "What is 1+1?", "choices": ["2", "3"], "answer": 0 },
+        { "q": "What is 2+2?", "choices": ["3", "4"], "answer": 1 }
+      ]
+    },
     { "type": "imagine", "prompt": "Imagine you could..." },
     { "type": "wrap", "keyTakeaways": ["Takeaway A", "Takeaway B"] }
   ],
