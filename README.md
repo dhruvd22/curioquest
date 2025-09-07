@@ -132,6 +132,35 @@ Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel
 
 For container deployments (e.g. Runpod), start `node serverless.mjs` after building. The app serves static files on `process.env.PORT` and a `/ping` health check on `process.env.PORT_HEALTH` for the load balancer.
 
+### RunPod Serverless
+When deploying to [RunPod](https://www.runpod.io/) you will receive two identifiers:
+
+- **Endpoint ID** – a UUID shown in the endpoint URL.
+- **API Key** – your personal secret used for authentication.
+
+The API key is **different** from the endpoint ID. You can create or view API keys in the RunPod dashboard by clicking your avatar → **API Keys**.
+
+Example requests:
+
+Using an Authorization header:
+
+```bash
+curl -X POST https://api.runpod.ai/v2/<ENDPOINT_ID>/run \
+  -H "Authorization: Bearer <RUNPOD_API_KEY>" \
+  -H "Content-Type: application/json" \
+  -d '{"input": {}}'
+```
+
+Passing the key as a query parameter:
+
+```bash
+curl "https://api.runpod.ai/v2/<ENDPOINT_ID>/run?api_key=<RUNPOD_API_KEY>" \
+  -H "Content-Type: application/json" \
+  -d '{"input": {}}'
+```
+
+Use your API key in these requests, not the endpoint ID.
+
 ## Roadmap
 - Search across stories
 - Recommendation engine
