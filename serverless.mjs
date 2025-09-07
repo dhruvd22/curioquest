@@ -9,6 +9,12 @@ const outDir = path.join(__dirname, 'out');
 
 const app = express();
 
+const pingHandler = (_req, res) => {
+  res.sendStatus(200);
+};
+
+app.get('/ping', pingHandler);
+
 // Serve exported static files
 app.use(express.static(outDir));
 
@@ -19,6 +25,15 @@ app.get('*', (_req, res) => {
 
 // Export handler expected by Runpod serverless
 export const handler = serverless(app);
+
+// Health check server for Runpod
+if (process.env.PORT_HEALTH) {
+  const healthApp = express();
+  healthApp.get('/ping', pingHandler);
+  healthApp.listen(process.env.PORT_HEALTH, () => {
+    console.log(`Health server running on port ${process.env.PORT_HEALTH}`);
+  });
+}
 
 // Allow local testing
 if (process.env.RUNPOD_LOCAL) {

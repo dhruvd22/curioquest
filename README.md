@@ -129,6 +129,8 @@ Stories target grades 5–7 with inclusive language and clear structure. Each ph
 ## Deployment
 `npm run build` outputs a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. No server is required.
 
+For container deployments (e.g. Runpod), start `node serverless.mjs` after building. The app serves static files on `process.env.PORT` and a `/ping` health check on `process.env.PORT_HEALTH` for the load balancer.
+
 ## Roadmap
 - Search across stories
 - Recommendation engine
