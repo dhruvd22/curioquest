@@ -15,7 +15,8 @@
     "generate:review": "tsx scripts/generate/run-batch.ts --all --images=skip --review-mode",
     "review:diff": "tsx scripts/review/make-diff.ts --all",
     "approve": "tsx scripts/review/approve.ts",
-    "publish": "tsx scripts/review/publish.ts --slug"
+    "publish": "tsx scripts/review/publish.ts --slug",
+    "cleanup": "tsx scripts/cleanup-content.ts"
   },
   "dependencies": {
     "mri": "^1.2.0",
