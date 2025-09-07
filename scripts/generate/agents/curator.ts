@@ -3,8 +3,7 @@ import { Agent, CuratorInput, CuratorOutput } from './_types';
 
 export const CuratorAgent: Agent<CuratorInput, CuratorOutput> = {
   name: 'Curator',
-  async run({ topic }) {
-    const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  async run({ topic, slug }) {
     const output: CuratorOutput = {
       slug,
       subAngles: ['history', 'science', 'surprise'],

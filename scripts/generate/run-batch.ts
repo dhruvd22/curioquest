@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import mri from 'mri';
 import { CuratorAgent } from './agents/curator';
 import { ResearchAgent } from './agents/research';
 import { OutlineAgent } from './agents/outline';
@@ -16,6 +17,19 @@ const CHECKPOINT_FILE = '/tmp/_checkpoints.json';
 
 function log(...msg: any[]) {
   console.log(new Date().toISOString(), ...msg);
+}
+
+function stripQuotes(s: string) {
+  return s.replace(/^['"]|['"]$/g, '');
+}
+function slugify(s: string) {
+  return s
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
 type ImageMode = 'render' | 'stock' | 'skip';
@@ -35,15 +49,15 @@ async function runTopic(
   imageMode: ImageMode,
   reviewMode: boolean
 ): Promise<RunResult> {
+  const slug = slugify(topic);
   const timings: Record<string, number> = {};
   let tokensOut = 0;
   const start = Date.now();
 
   const curatorStart = Date.now();
-  const curator = await CuratorAgent.run({ topic });
+  const curator = await CuratorAgent.run({ topic, slug });
   timings.CuratorAgent = Date.now() - curatorStart;
   tokensOut += JSON.stringify(curator).length;
-  const { slug } = curator;
 
   const finalPath = path.join(CONTENT, `${slug}.json`);
   if (!force) {
@@ -204,30 +218,40 @@ function displayProgress(records: RecordEntry[]) {
 }
 
 async function main() {
-  const args = process.argv.slice(2);
-  const force = args.includes('--force');
-  const all = args.includes('--all');
-  const topicIdx = args.indexOf('--topic');
-  const imgArg = args.find((a) => a.startsWith('--images='));
-  const imageMode = (imgArg ? imgArg.split('=')[1] : 'skip') as ImageMode;
-  const concArg = args.find((a) => a.startsWith('--concurrency='));
-  const concurrency = concArg ? parseInt(concArg.split('=')[1], 10) : 1;
-  const maxMsArg = args.find((a) => a.startsWith('--max-ms-per-topic='));
-  const maxMsPerTopic = maxMsArg ? parseInt(maxMsArg.split('=')[1], 10) : Infinity;
-  const maxCharsArg = args.find((a) => a.startsWith('--max-chars='));
-  const maxChars = maxCharsArg ? parseInt(maxCharsArg.split('=')[1], 10) : Infinity;
-  const reviewArg = args.find((a) => a.startsWith('--review-mode'));
-  const reviewMode = reviewArg ? reviewArg.split('=')[1] !== 'false' : true;
+  const argv = mri(process.argv.slice(2), {
+    string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
+    boolean: ['force', 'review-mode', 'all'],
+    default: { images: 'skip', concurrency: '2', 'review-mode': true },
+  });
 
-  let seedTopics: string[] = [];
-  if (topicIdx >= 0 && args[topicIdx + 1]) {
-    seedTopics = [args[topicIdx + 1]];
-  } else {
+  const force = !!argv.force;
+  const all = !!argv.all;
+  const imageMode = argv.images as ImageMode;
+  const concurrency = parseInt(argv.concurrency || '2', 10);
+  const maxMsPerTopic = argv['max-ms-per-topic']
+    ? parseInt(argv['max-ms-per-topic'], 10)
+    : Infinity;
+  const maxChars = argv['max-chars'] ? parseInt(argv['max-chars'], 10) : Infinity;
+  const reviewMode = argv['review-mode'] as boolean;
+
+  const topicFlags = Array.isArray(argv.topic)
+    ? argv.topic
+    : argv.topic
+    ? [argv.topic]
+    : [];
+  let topics = topicFlags
+    .flatMap((s: string) => stripQuotes(s).split(','))
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  if (topics.length === 0) {
     const seed = JSON.parse(
       await fs.readFile(path.join(process.cwd(), 'scripts/generate/topics.seed.json'), 'utf8')
     );
-    seedTopics = seed;
+    topics = seed;
   }
+
+  console.log('Parsed topics:', topics);
 
   let checkpoint: string[] = [];
   try {
@@ -235,7 +259,7 @@ async function main() {
   } catch {}
   const checkpointSet = new Set(checkpoint);
 
-  const records: RecordEntry[] = seedTopics.map((t) => ({
+  const records: RecordEntry[] = topics.map((t) => ({
     topic: t,
     status: !force && !all && checkpointSet.has(t) ? 'skipped' : 'pending',
   }));
