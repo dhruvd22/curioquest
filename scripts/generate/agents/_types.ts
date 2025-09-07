@@ -1,6 +1,6 @@
 export interface Agent<I, O> { name: string; run(input: I): Promise<O>; }
 
-export type CuratorInput = { topic: string };
+export type CuratorInput = { topic: string; slug: string };
 export type CuratorOutput = {
   slug: string;
   subAngles: string[];
