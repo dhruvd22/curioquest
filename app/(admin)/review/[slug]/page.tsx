@@ -10,12 +10,14 @@ export const dynamicParams = false;
 
 export const dynamic = "force-static";
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
+export async function generateStaticParams() {
   try {
     const entries = await fs.readdir(INCOMING_DIR, { withFileTypes: true });
-    return entries.filter(e => e.isDirectory()).map(e => ({ slug: e.name }));
+    const slugs = entries.filter((e) => e.isDirectory()).map((e) => ({ slug: e.name }));
+    // Next.js static export requires at least one path for dynamic routes
+    return slugs.length > 0 ? slugs : [{ slug: "__placeholder__" }];
   } catch {
-    return [];
+    return [{ slug: "__placeholder__" }];
   }
 }
 
