@@ -6,6 +6,7 @@ on:
       topics:
         description: "Comma-separated list of topics to generate"
         required: false
+        type: string
         default: ""
       images:
         description: "Image handling"
@@ -16,11 +17,6 @@ on:
           - skip
           - render
           - stock
-      force:
-        description: "Force regeneration even if checkpoints exist"
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -37,19 +33,16 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Run generation
+      - name: Generate content
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          TOPIC_ARGS=""
-          if [ -n "${{ inputs.topics }}" ]; then
-            TOPIC_ARGS="--topic \"${{ inputs.topics }}\""
+          TOPICS="${{ github.event.inputs.topics }}"
+          if [ -n "$TOPICS" ]; then
+            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --topic "$TOPICS"
+          else
+            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --all
           fi
-          FORCE_ARG=""
-          if [ "${{ inputs.force }}" = "true" ]; then
-            FORCE_ARG="--force"
-          fi
-          npm run generate -- --images=${{ inputs.images }} $FORCE_ARG $TOPIC_ARGS
       - run: npm run validate && npm run audit
       - name: Commit and push
         run: |
