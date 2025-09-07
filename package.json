@@ -16,15 +16,18 @@
     "review:diff": "tsx scripts/review/make-diff.ts --all",
     "approve": "tsx scripts/review/approve.ts",
     "publish": "tsx scripts/review/publish.ts --slug",
-    "cleanup": "tsx scripts/cleanup-content.ts"
+    "cleanup": "tsx scripts/cleanup-content.ts",
+    "runpod": "node serverless.mjs"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "mri": "^1.2.0",
     "next": "14.2.5",
     "openai": "^5.19.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^10.1.0",
+    "serverless-http": "^4.0.0",
     "sharp": "^0.33.3",
     "zod": "^3.25.76"
   },
