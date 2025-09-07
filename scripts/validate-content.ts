@@ -23,7 +23,10 @@ async function main() {
     const story = await readJSON<any>(storyPath);
     const parsedStory = StorySchema.safeParse(story);
     if (!parsedStory.success) {
-      error('Invalid story:', t.slug, parsedStory.error.format());
+      error('Invalid story:', t.slug);
+      for (const issue of parsedStory.error.issues) {
+        error(`  ${issue.path.join('.')}: ${issue.message}`);
+      }
       ok = false;
       continue;
     }
