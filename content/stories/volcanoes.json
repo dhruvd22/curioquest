@@ -1,0 +1,69 @@
+{
+  "slug": "volcanoes",
+  "title": "Volcano Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/example/hero.webp",
+    "alt": "Volcano hero"
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "StubSource",
+      "url": "https://example.com"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Feel the Heat",
+      "body": "Let's learn about volcanoes."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Volcanoes?",
+      "body": "A look at these fiery mountains."
+    },
+    {
+      "type": "discovery",
+      "heading": "Inside a Volcano",
+      "body": "Exploring how volcanoes work."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "Eruptions!",
+      "body": "Volcanoes can be spectacular."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        { "sourceId": "s1", "text": "Volcanoes can create new land." },
+        { "sourceId": "s1", "text": "There are more than 1,500 active volcanoes on Earth." },
+        { "sourceId": "s1", "text": "Magma becomes lava once it reaches the surface." }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        { "q": "Is lava hot?", "choices": ["Yes", "No"], "answer": 0 },
+        { "q": "Can volcanoes form islands?", "choices": ["Yes", "No"], "answer": 0 }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine watching a safe, distant eruption."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Volcanoes shape Earth's surface.",
+        "Their eruptions are powerful natural events."
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}
