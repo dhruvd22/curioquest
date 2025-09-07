@@ -91,7 +91,8 @@ Topics are listed in `content/topics.json`:
 
 ## Scripts
 - `npm run dev` – start local development
-- `npm run build` – build and export static site to `out/`
+- `npm run build` – build the Next.js app
+- `npm run export` – build and export static site to `out/`
 - `npm run validate` – validate content against schemas
 - `npm run audit` – readability statistics for stories
 - `npm run generate` – run generation pipeline
@@ -127,7 +128,7 @@ Hero and support images live under `public/assets/<slug>/`. Use `--images=render
 Stories target grades 5–7 with inclusive language and clear structure. Each phase uses headings, quiz answers are explicit, images require alt text, and tone remains age‑appropriate.
 
 ## Deployment
-`npm run build` outputs a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. No server is required.
+Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. If using `serverless.mjs` (e.g., `npm run runpod`), run the export script before starting the server.
 
 ## Roadmap
 - Search across stories
