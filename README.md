@@ -133,7 +133,22 @@ Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel
 For container deployments (e.g. Runpod), start `node serverless.mjs` after building. The app serves static files on `process.env.PORT` and a `/ping` health check on `process.env.PORT_HEALTH` for the load balancer.
 
 ### RunPod Serverless
-When deploying to [RunPod](https://www.runpod.io/) you will receive two identifiers:
+To run CurioQuest on [RunPod](https://www.runpod.io/):
+
+1. **Build the static site**
+   ```bash
+   npm install
+   npm run export
+   ```
+2. **Start the serverless handler**  
+   RunPod injects `PORT` and `PORT_HEALTH`. For local testing:
+   ```bash
+   RUNPOD_LOCAL=1 PORT=3000 PORT_HEALTH=3001 node serverless.mjs
+   ```
+3. **Access the site**  
+   After deployment open your endpoint URL, e.g. `https://js4f1ftbo81bhb.api.runpod.ai`, in a browser. The `/ping` path on the health port returns `200` for health checks.
+
+When deploying to RunPod you will receive two identifiers:
 
 - **Endpoint ID** – a UUID shown in the endpoint URL.
 - **API Key** – your personal secret used for authentication.
