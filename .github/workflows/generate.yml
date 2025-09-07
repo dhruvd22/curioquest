@@ -1,0 +1,64 @@
+name: Generate
+
+on:
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: "Comma-separated list of topics to generate"
+        required: false
+        default: ""
+      images:
+        description: "Image handling"
+        required: true
+        type: choice
+        default: skip
+        options:
+          - skip
+          - render
+          - stock
+      force:
+        description: "Force regeneration even if checkpoints exist"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Run generation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          TOPIC_ARGS=""
+          if [ -n "${{ inputs.topics }}" ]; then
+            TOPIC_ARGS="--topic \"${{ inputs.topics }}\""
+          fi
+          FORCE_ARG=""
+          if [ "${{ inputs.force }}" = "true" ]; then
+            FORCE_ARG="--force"
+          fi
+          npm run generate -- --images=${{ inputs.images }} $FORCE_ARG $TOPIC_ARGS
+      - run: npm run validate && npm run audit
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add content public/assets
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update generated content"
+            git push
+          fi

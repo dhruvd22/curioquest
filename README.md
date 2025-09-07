@@ -100,6 +100,13 @@ Topics are listed in `content/topics.json`:
 - `tsx scripts/generate/smoke-ai.ts` – quick OpenAI smoke test
 - Logs: `.ai_logs/<date>.ndjson`
 
+### CI
+
+GitHub Actions automate key workflows:
+
+- **Generate** (`.github/workflows/generate.yml`) – manually trigger to run generation, validation, and audit, committing updates to `content/` and `public/assets/`.
+- **Release** (`.github/workflows/release.yml`) – on push to `main` or manual dispatch, builds the static site and publishes a container image to GHCR that serves `out/` on `$PORT`.
+
 ## Generation Pipeline (Agents)
 1. **Curator** – derives slug, sub‑angles, tone
 2. **Research** – gathers facts and sources (Wikipedia, NASA)
