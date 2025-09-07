@@ -12,5 +12,17 @@
     "title": "Rockets",
     "thumbnail": "/assets/rockets/hero.webp",
     "badges": []
+  },
+  {
+    "slug": "deep-sea",
+    "title": "Deep Sea",
+    "thumbnail": "/assets/example/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "volcanoes",
+    "title": "Volcanoes",
+    "thumbnail": "/assets/example/hero.webp",
+    "badges": []
   }
 ]
