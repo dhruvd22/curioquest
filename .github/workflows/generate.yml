@@ -39,11 +39,11 @@ jobs:
         run: |
           TOPICS="${{ github.event.inputs.topics }}"
           if [ -n "$TOPICS" ]; then
-            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --topic "$TOPICS"
+            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --no-review-mode --topic "$TOPICS"
           else
-            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --all
+            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --no-review-mode --all
           fi
-      - run: npm run validate && npm run audit
+      - run: npm run validate && npm run audit && npm run cleanup
       - name: Commit and push
         run: |
           git config user.name "github-actions"
