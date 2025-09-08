@@ -48,4 +48,4 @@ export type PackagerInput = {
   };
   reviewMode?: boolean;
 };
-export type PackagerOutput = { path: string };
+export type PackagerOutput = { path: string; ok: boolean };
