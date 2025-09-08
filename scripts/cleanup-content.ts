@@ -13,7 +13,7 @@ async function cleanup() {
   try {
     stories = await fs.readdir(STORIES_DIR);
   } catch {
-    return; // nothing to do
+    // no stories directory; continue with empty list
   }
   const storySlugs = new Set(
     stories
