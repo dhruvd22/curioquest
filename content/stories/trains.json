@@ -1,0 +1,101 @@
+{
+  "slug": "trains",
+  "title": "Trains Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/trains/hero.webp",
+    "alt": "A cheerful cartoon train traveling through a picturesque landscape filled with trees and mountains."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Train",
+      "url": "https://en.wikipedia.org/wiki/Train"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Trains",
+      "body": "Let's learn about Trains. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Trains play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Trains?",
+      "body": "Trains in a nutshell. Understanding the basics of Trains helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Trains."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Trains",
+      "body": "More about Trains. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Trains. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Trains can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Trains truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Trains are like long, connected caterpillars that can carry people and things across great distances."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Most trains glide along steel tracks, making them speedy and energy-efficient."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Each train car has a special job, whether it's for passengers or transporting goods."
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Trains travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Trains fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Trains?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Trains for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Trains."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Trains are fascinating",
+        "Learning about Trains is fun",
+        "There is always more to discover about Trains"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

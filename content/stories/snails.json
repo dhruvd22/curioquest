@@ -1,0 +1,101 @@
+{
+  "slug": "snails",
+  "title": "Snails Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/snails/hero.webp",
+    "alt": "A vibrant garden filled with different types of snails: a land snail, a colorful sea snail, and a freshwater snail, surrounded by flowers."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Snail",
+      "url": "https://en.wikipedia.org/wiki/Snail"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Snails",
+      "body": "Let's learn about Snails. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Snails play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Snails?",
+      "body": "Snails in a nutshell. Understanding the basics of Snails helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Snails."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Snails",
+      "body": "More about Snails. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Snails. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Snails can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Snails truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "A snail is like a tiny turtle, carrying its cozy shell wherever it goes!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "While most people think of land snails, there are also colorful sea snails and playful freshwater snails!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "If a gastropod has no shell, it’s a slug, but if it has a tiny shell, it’s a semi-slug!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Snails travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Snails fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Snails?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Snails for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Snails."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Snails are fascinating",
+        "Learning about Snails is fun",
+        "There is always more to discover about Snails"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

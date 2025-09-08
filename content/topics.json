@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "slug": "snails",
+    "title": "Snails",
+    "thumbnail": "/assets/snails/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "trains",
+    "title": "Trains",
+    "thumbnail": "/assets/trains/hero.webp",
+    "badges": []
+  }
+]
