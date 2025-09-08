@@ -153,7 +153,7 @@ async function runTopic(
       timings.IllustratorPromptAgent = Date.now() - artStart;
       tokensOut += JSON.stringify(art).length;
       images.hero.alt = art.hero.alt;
-      if (imageMode === 'render' && art.hero.license === 'render') {
+      if (imageMode === 'render') {
         await renderImage(art.hero.prompt, heroFile, force);
       } else {
         try {
@@ -166,7 +166,7 @@ async function runTopic(
         const img = art.supports[i];
         const fname = `support-${i + 1}.webp`;
         const fpath = path.join(assetDir, fname);
-        if (imageMode === 'render' && img.license === 'render') {
+        if (imageMode === 'render') {
           await renderImage(img.prompt, fpath, force);
         } else {
           try {
@@ -240,14 +240,14 @@ async function main() {
   const argv = mri(process.argv.slice(2), {
     string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
     boolean: ['force', 'review-mode', 'clean'],
-    default: { images: 'render', concurrency: '3', 'review-mode': false },
+    default: { images: 'render', concurrency: '10', 'review-mode': false },
   });
 
   const force = !!argv.force;
   const all = !!argv.all;
   const clean = !!argv.clean;
   const imageMode = argv.images as ImageMode;
-  const concurrency = parseInt(argv.concurrency || '3', 10);
+  const concurrency = parseInt(argv.concurrency || '10', 10);
   const maxMsPerTopic = argv['max-ms-per-topic']
     ? parseInt(argv['max-ms-per-topic'], 10)
     : Infinity;
