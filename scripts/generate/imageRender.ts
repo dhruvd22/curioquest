@@ -19,13 +19,15 @@ export async function saveBase64Webp(b64: string, outFile: string) {
   await sharp(buf).webp({ quality: 82 }).toFile(outFile);
 }
 
-export async function renderImage(prompt: string, outFile: string) {
+export async function renderImage(prompt: string, outFile: string, force = false) {
   const cli = await loadClient();
   if (!cli) return false;
-  try {
-    await fs.access(outFile);
-    return true;
-  } catch {}
+  if (!force) {
+    try {
+      await fs.access(outFile);
+      return true;
+    } catch {}
+  }
   const res = await cli.images.generate({ model: 'gpt-image-1', prompt, size: '1024x1024' });
   const b64 = res?.data?.[0]?.b64_json;
   if (!b64) return false;
