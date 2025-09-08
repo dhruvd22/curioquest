@@ -91,8 +91,7 @@ Topics are listed in `content/topics.json`:
 
 ## Scripts
 - `npm run dev` – start local development
-- `npm run build` – build the Next.js app
-- `npm run export` – build and export static site to `out/`
+- `npm run build` – build the static site to `out/`
 - `npm run validate` – validate content against schemas
 - `npm run audit` – readability statistics for stories
 - `npm run generate` – run generation pipeline
@@ -128,15 +127,15 @@ Hero and support images live under `public/assets/<slug>/`. Use `--images=render
 Stories target grades 5–7 with inclusive language and clear structure. Each phase uses headings, quiz answers are explicit, images require alt text, and tone remains age‑appropriate.
 
 ## Deployment
-Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. When running `serverless.mjs` directly (e.g., `npm run runpod`), generate `out/` first.
+Run `npm run build` to output a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. When running `serverless.mjs` directly (e.g., `npm run runpod`), generate `out/` first.
 
-The included Dockerfile builds the site during the image build (`npm ci` followed by `npm run export`) and bundles `serverless.mjs`. The resulting container serves `out/` on `process.env.PORT` and exposes `/ping` on `process.env.PORT_HEALTH` when started with `node serverless.mjs`.
+The included Dockerfile builds the site during the image build (`npm ci` followed by `npm run build`) and bundles `serverless.mjs`. The resulting container serves `out/` on `process.env.PORT` and exposes `/ping` on `process.env.PORT_HEALTH` when started with `node serverless.mjs`.
 
 ### RunPod Serverless
 To run CurioQuest on [RunPod](https://www.runpod.io/):
 
 1. **Build and push the image**
-   The Dockerfile runs `npm ci` and `npm run export`, so no pre-built `out/` directory is required.
+   The Dockerfile runs `npm ci` and `npm run build`, so no pre-built `out/` directory is required.
    ```bash
    docker build -t <registry-user>/curioquest:latest .
    docker push <registry-user>/curioquest:latest
@@ -145,7 +144,7 @@ To run CurioQuest on [RunPod](https://www.runpod.io/):
    RunPod injects `PORT` and `PORT_HEALTH`. For local testing outside Docker, generate `out/` then launch:
    ```bash
    npm install
-   npm run export
+   npm run build
    RUNPOD_LOCAL=1 PORT=3000 PORT_HEALTH=3001 node serverless.mjs
    ```
 3. **Access the site**
