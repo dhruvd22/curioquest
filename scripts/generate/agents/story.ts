@@ -20,22 +20,46 @@ function makeFallbackDraft(topic: string, factGems: StoryInput['factGems']): Sto
   return {
     title: `${topic} Basics`,
     phases: [
-      { type: 'hook', heading: `Exploring ${topic}`, body: `Let's learn about ${topic}.` },
-      { type: 'orientation', heading: `What are ${topic}?`, body: `${topic} in a nutshell.` },
-      { type: 'discovery', heading: `Digging into ${topic}`, body: `More about ${topic}.` },
-      { type: 'wow-panel', heading: `A wow moment`, body: `${topic} can be surprising!` },
+      {
+        type: 'hook',
+        heading: `Exploring ${topic}`,
+        body: `Let's learn about ${topic}. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, ${topic} play a role in our world.`,
+      },
+      {
+        type: 'orientation',
+        heading: `What are ${topic}?`,
+        body: `${topic} in a nutshell. Understanding the basics of ${topic} helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about ${topic}.`,
+      },
+      {
+        type: 'discovery',
+        heading: `Digging into ${topic}`,
+        body: `More about ${topic}. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about ${topic}. The more we investigate, the more connections we find to technology, culture, and the natural world.`,
+      },
+      {
+        type: 'wow-panel',
+        heading: `A wow moment`,
+        body: `${topic} can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable ${topic} truly are.`,
+      },
       { type: 'fact-gems', items: factGems.slice(0, 3) },
       {
         type: 'mini-quiz',
         items: [
           { q: `Where do ${topic} travel?`, choices: ['Space', 'Sea'], answer: 0 },
           { q: `Are ${topic} fast?`, choices: ['Yes', 'No'], answer: 0 },
+          { q: `Would you like to explore ${topic}?`, choices: ['Absolutely', 'Maybe later'], answer: 0 },
         ],
       },
-      { type: 'imagine', prompt: `Imagine using ${topic} for adventure.` },
+      {
+        type: 'imagine',
+        prompt: `Imagine using ${topic} for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by ${topic}.`,
+      },
       {
         type: 'wrap',
-        keyTakeaways: [`${topic} are fascinating`, `Learning about ${topic} is fun`],
+        keyTakeaways: [
+          `${topic} are fascinating`,
+          `Learning about ${topic} is fun`,
+          `There is always more to discover about ${topic}`,
+        ],
       },
     ],
   };

@@ -240,14 +240,14 @@ async function main() {
   const argv = mri(process.argv.slice(2), {
     string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
     boolean: ['force', 'review-mode', 'clean'],
-    default: { images: 'render', concurrency: '10', 'review-mode': false },
+    default: { images: 'render', concurrency: '20', 'review-mode': false, clean: true },
   });
 
   const force = !!argv.force;
   const all = !!argv.all;
-  const clean = !!argv.clean;
+  const clean = argv.clean as boolean;
   const imageMode = argv.images as ImageMode;
-  const concurrency = parseInt(argv.concurrency || '10', 10);
+  const concurrency = parseInt(argv.concurrency || '20', 10);
   const maxMsPerTopic = argv['max-ms-per-topic']
     ? parseInt(argv['max-ms-per-topic'], 10)
     : Infinity;
@@ -263,6 +263,11 @@ async function main() {
       fs.rm(path.join(process.cwd(), '_rejects'), { recursive: true, force: true }),
       fs.rm(path.join(process.cwd(), 'review', 'incoming'), { recursive: true, force: true }),
       fs.rm(CHECKPOINT_FILE, { force: true }),
+    ]);
+    await Promise.all([
+      fs.mkdir(path.join(process.cwd(), 'content', 'stories'), { recursive: true }),
+      fs.mkdir(path.join(process.cwd(), 'public', 'assets'), { recursive: true }),
+      fs.mkdir(path.join(process.cwd(), 'review', 'incoming'), { recursive: true }),
     ]);
     try {
       await fs.writeFile(path.join(process.cwd(), 'content', 'topics.json'), '[]', 'utf8');
