@@ -32,7 +32,7 @@ export async function renderImage(prompt: string, outFile: string, force = false
     } catch {}
   }
   try {
-    const res = await cli.images.generate({ model: 'gpt-image-1.5', prompt, size: '1024x1024' });
+    const res = await cli.images.generate({ model: 'gpt-image-1', prompt, size: '1024x1024' });
     const b64 = res?.data?.[0]?.b64_json;
     if (!b64) {
       console.warn('Image generation returned no data');
