@@ -57,104 +57,126 @@ async function runTopic(
   const timings: Record<string, number> = {};
   let tokensOut = 0;
   const start = Date.now();
-
-  if (force) {
-    await Promise.all([
-      fs.rm(finalPath, { force: true }),
-      fs.rm(assetDir, { recursive: true, force: true }),
-    ]);
-  } else {
-    try {
-      await fs.access(finalPath);
-      log('Skip (exists):', slug);
-      return { status: 'skipped', slug, ms: 0, tokensIn: 0, tokensOut: 0, timings };
-    } catch {}
-  }
-
-  const curatorStart = Date.now();
-  const curator = await CuratorAgent.run({ topic, slug });
-  timings.CuratorAgent = Date.now() - curatorStart;
-  tokensOut += JSON.stringify(curator).length;
-
-  log('Start:', slug);
-
-  const researchStart = Date.now();
-  const research = await ResearchAgent.run({ slug, topic, subAngles: curator.subAngles });
-  timings.ResearchAgent = Date.now() - researchStart;
-  tokensOut += JSON.stringify(research).length;
-
-  const outlineStart = Date.now();
-  const outline = await OutlineAgent.run({ slug, topic, ...research });
-  timings.OutlineAgent = Date.now() - outlineStart;
-  tokensOut += JSON.stringify(outline).length;
-
-  const draftsStart = Date.now();
-  const drafts = await StoryAgent.run({ slug, topic, ...outline });
-  timings.StoryAgent = Date.now() - draftsStart;
-  tokensOut += JSON.stringify(drafts).length;
-
-  const safeDrafts = [] as typeof drafts;
-  for (let i = 0; i < drafts.length; i++) {
-    const safetyStart = Date.now();
-    const safety = await SafetyAgent.run({ slug, draft: drafts[i] });
-    const sMs = Date.now() - safetyStart;
-    timings.SafetyAgent = (timings.SafetyAgent || 0) + sMs;
-    tokensOut += JSON.stringify(safety).length;
-    await fs.writeFile(`/tmp/${slug}/safety-${i + 1}.json`, JSON.stringify(safety, null, 2), 'utf8');
-    if (safety.ok) safeDrafts.push(safety.draft);
-    else {
-      const rej = path.join(process.cwd(), '_rejects', slug);
-      await fs.mkdir(rej, { recursive: true });
-      await fs.writeFile(path.join(rej, `draft-${i + 1}.json`), JSON.stringify(drafts[i], null, 2), 'utf8');
+  try {
+    if (force) {
+      await Promise.all([
+        fs.rm(finalPath, { force: true }),
+        fs.rm(assetDir, { recursive: true, force: true }),
+      ]);
+    } else {
+      try {
+        await fs.access(finalPath);
+        log('Skip (exists):', slug);
+        return { status: 'skipped', slug, ms: 0, tokensIn: 0, tokensOut: 0, timings };
+      } catch {}
     }
-  }
-  if (safeDrafts.length === 0) {
-    log('No safe drafts:', slug);
-    return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
-  }
 
-  const verifiedDrafts = [] as typeof drafts;
-  for (let i = 0; i < safeDrafts.length; i++) {
-    const verifierStart = Date.now();
-    const verifier = await VerifierAgent.run({ slug, draft: safeDrafts[i] });
-    const vMs = Date.now() - verifierStart;
-    timings.VerifierAgent = (timings.VerifierAgent || 0) + vMs;
-    tokensOut += JSON.stringify(verifier).length;
-    await fs.writeFile(`/tmp/${slug}/verifier-${i + 1}.json`, JSON.stringify(verifier, null, 2), 'utf8');
-    if (verifier.verified) verifiedDrafts.push(verifier.draft);
-    else {
-      const rej = path.join(process.cwd(), '_rejects', slug);
-      await fs.mkdir(rej, { recursive: true });
-      await fs.writeFile(path.join(rej, `draft-${i + 1}.json`), JSON.stringify(safeDrafts[i], null, 2), 'utf8');
+    const curatorStart = Date.now();
+    const curator = await CuratorAgent.run({ topic, slug });
+    timings.CuratorAgent = Date.now() - curatorStart;
+    tokensOut += JSON.stringify(curator).length;
+
+    log('Start:', slug);
+
+    const researchStart = Date.now();
+    const research = await ResearchAgent.run({ slug, topic, subAngles: curator.subAngles });
+    timings.ResearchAgent = Date.now() - researchStart;
+    tokensOut += JSON.stringify(research).length;
+
+    const outlineStart = Date.now();
+    const outline = await OutlineAgent.run({ slug, topic, ...research });
+    timings.OutlineAgent = Date.now() - outlineStart;
+    tokensOut += JSON.stringify(outline).length;
+
+    const draftsStart = Date.now();
+    const drafts = await StoryAgent.run({ slug, topic, ...outline });
+    timings.StoryAgent = Date.now() - draftsStart;
+    tokensOut += JSON.stringify(drafts).length;
+
+    const safeDrafts = [] as typeof drafts;
+    for (let i = 0; i < drafts.length; i++) {
+      const safetyStart = Date.now();
+      const safety = await SafetyAgent.run({ slug, draft: drafts[i] });
+      const sMs = Date.now() - safetyStart;
+      timings.SafetyAgent = (timings.SafetyAgent || 0) + sMs;
+      tokensOut += JSON.stringify(safety).length;
+      await fs.writeFile(`/tmp/${slug}/safety-${i + 1}.json`, JSON.stringify(safety, null, 2), 'utf8');
+      if (safety.ok) safeDrafts.push(safety.draft);
+      else {
+        const rej = path.join(process.cwd(), '_rejects', slug);
+        await fs.mkdir(rej, { recursive: true });
+        await fs.writeFile(path.join(rej, `draft-${i + 1}.json`), JSON.stringify(drafts[i], null, 2), 'utf8');
+      }
     }
-  }
-  if (verifiedDrafts.length === 0) {
-    log('No verified drafts:', slug);
-    return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
-  }
+    if (safeDrafts.length === 0) {
+      log('No safe drafts:', slug);
+      return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
+    }
 
-  const judgeStart = Date.now();
-  const judge = await JudgeAgent.run({ slug, drafts: verifiedDrafts });
-  timings.JudgeAgent = Date.now() - judgeStart;
-  tokensOut += JSON.stringify(judge).length;
-  const finalDraft = verifiedDrafts[judge.chosenIndex] || verifiedDrafts[0];
+    const verifiedDrafts = [] as typeof drafts;
+    for (let i = 0; i < safeDrafts.length; i++) {
+      const verifierStart = Date.now();
+      const verifier = await VerifierAgent.run({ slug, draft: safeDrafts[i] });
+      const vMs = Date.now() - verifierStart;
+      timings.VerifierAgent = (timings.VerifierAgent || 0) + vMs;
+      tokensOut += JSON.stringify(verifier).length;
+      await fs.writeFile(`/tmp/${slug}/verifier-${i + 1}.json`, JSON.stringify(verifier, null, 2), 'utf8');
+      if (verifier.verified) verifiedDrafts.push(verifier.draft);
+      else {
+        const rej = path.join(process.cwd(), '_rejects', slug);
+        await fs.mkdir(rej, { recursive: true });
+        await fs.writeFile(path.join(rej, `draft-${i + 1}.json`), JSON.stringify(safeDrafts[i], null, 2), 'utf8');
+      }
+    }
+    if (verifiedDrafts.length === 0) {
+      log('No verified drafts:', slug);
+      return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
+    }
 
-  await fs.mkdir(assetDir, { recursive: true });
-  const heroFile = path.join(assetDir, 'hero.webp');
+    const judgeStart = Date.now();
+    const judge = await JudgeAgent.run({ slug, drafts: verifiedDrafts });
+    timings.JudgeAgent = Date.now() - judgeStart;
+    tokensOut += JSON.stringify(judge).length;
+    const finalDraft = verifiedDrafts[judge.chosenIndex] || verifiedDrafts[0];
 
-  let images = {
-    hero: { file: `/assets/${slug}/hero.webp`, alt: `${topic} hero` },
-    supports: [] as { file: string; alt: string }[],
-  };
+    await fs.mkdir(assetDir, { recursive: true });
+    const heroFile = path.join(assetDir, 'hero.webp');
 
-  if (imageMode !== 'skip') {
-    const artStart = Date.now();
-    const art = await IllustratorPromptAgent.run({ slug, story: finalDraft });
-    timings.IllustratorPromptAgent = Date.now() - artStart;
-    tokensOut += JSON.stringify(art).length;
-    images.hero.alt = art.hero.alt;
-    if (imageMode === 'render' && art.hero.license === 'render') {
-      await renderImage(art.hero.prompt, heroFile, force);
+    let images = {
+      hero: { file: `/assets/${slug}/hero.webp`, alt: `${topic} hero` },
+      supports: [] as { file: string; alt: string }[],
+    };
+
+    if (imageMode !== 'skip') {
+      const artStart = Date.now();
+      const art = await IllustratorPromptAgent.run({ slug, story: finalDraft });
+      timings.IllustratorPromptAgent = Date.now() - artStart;
+      tokensOut += JSON.stringify(art).length;
+      images.hero.alt = art.hero.alt;
+      if (imageMode === 'render' && art.hero.license === 'render') {
+        await renderImage(art.hero.prompt, heroFile, force);
+      } else {
+        try {
+          await fs.access(heroFile);
+        } catch {
+          await fs.writeFile(heroFile, '');
+        }
+      }
+      for (let i = 0; i < Math.min(2, art.supports.length); i++) {
+        const img = art.supports[i];
+        const fname = `support-${i + 1}.webp`;
+        const fpath = path.join(assetDir, fname);
+        if (imageMode === 'render' && img.license === 'render') {
+          await renderImage(img.prompt, fpath, force);
+        } else {
+          try {
+            await fs.access(fpath);
+          } catch {
+            await fs.writeFile(fpath, '');
+          }
+        }
+        images.supports.push({ file: `/assets/${slug}/${fname}`, alt: img.alt });
+      }
     } else {
       try {
         await fs.access(heroFile);
@@ -162,53 +184,35 @@ async function runTopic(
         await fs.writeFile(heroFile, '');
       }
     }
-    for (let i = 0; i < Math.min(2, art.supports.length); i++) {
-      const img = art.supports[i];
-      const fname = `support-${i + 1}.webp`;
-      const fpath = path.join(assetDir, fname);
-      if (imageMode === 'render' && img.license === 'render') {
-        await renderImage(img.prompt, fpath, force);
-      } else {
-        try {
-          await fs.access(fpath);
-        } catch {
-          await fs.writeFile(fpath, '');
-        }
-      }
-      images.supports.push({ file: `/assets/${slug}/${fname}`, alt: img.alt });
-    }
-  } else {
-    try {
-      await fs.access(heroFile);
-    } catch {
-      await fs.writeFile(heroFile, '');
-    }
-  }
 
-  const packagerStart = Date.now();
-  const packaged = await PackagerAgent.run({
-    slug,
-    topic,
-    draft: finalDraft,
-    sources: outline.sources,
-    images,
-    reviewMode,
-  });
-  timings.PackagerAgent = Date.now() - packagerStart;
+    const packagerStart = Date.now();
+    const packaged = await PackagerAgent.run({
+      slug,
+      topic,
+      draft: finalDraft,
+      sources: outline.sources,
+      images,
+      reviewMode,
+    });
+    timings.PackagerAgent = Date.now() - packagerStart;
 
-  if (!packaged.ok) {
-    try {
-      await fs.rm(assetDir, { recursive: true, force: true });
-    } catch {}
-    log('Packager rejected:', slug);
+    if (!packaged.ok) {
+      try {
+        await fs.rm(assetDir, { recursive: true, force: true });
+      } catch {}
+      log('Packager rejected:', slug, 'see', packaged.path);
+      return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
+    }
+
+    log('Generated:', slug);
+
+    const ms = Date.now() - start;
+    const tokensIn = tokensOut; // rough approximation
+    return { status: 'ok', slug, ms, tokensIn, tokensOut, timings };
+  } catch (e) {
+    log('Error generating topic:', slug, e);
     return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
   }
-
-  log('Generated:', slug);
-
-  const ms = Date.now() - start;
-  const tokensIn = tokensOut; // rough approximation
-  return { status: 'ok', slug, ms, tokensIn, tokensOut, timings };
 }
 
 interface RecordEntry {
@@ -235,12 +239,13 @@ function displayProgress(records: RecordEntry[]) {
 async function main() {
   const argv = mri(process.argv.slice(2), {
     string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
-    boolean: ['force', 'review-mode'],
+    boolean: ['force', 'review-mode', 'clean'],
     default: { images: 'render', concurrency: '3', 'review-mode': false },
   });
 
   const force = !!argv.force;
   const all = !!argv.all;
+  const clean = !!argv.clean;
   const imageMode = argv.images as ImageMode;
   const concurrency = parseInt(argv.concurrency || '3', 10);
   const maxMsPerTopic = argv['max-ms-per-topic']
@@ -249,6 +254,20 @@ async function main() {
   const maxChars = argv['max-chars'] ? parseInt(argv['max-chars'], 10) : Infinity;
   const reviewMode = argv['review-mode'] as boolean;
   const budget = new Budget();
+
+  if (clean) {
+    log('Cleaning previous run output');
+    await Promise.all([
+      fs.rm(path.join(process.cwd(), 'content', 'stories'), { recursive: true, force: true }),
+      fs.rm(path.join(process.cwd(), 'public', 'assets'), { recursive: true, force: true }),
+      fs.rm(path.join(process.cwd(), '_rejects'), { recursive: true, force: true }),
+      fs.rm(path.join(process.cwd(), 'review', 'incoming'), { recursive: true, force: true }),
+      fs.rm(CHECKPOINT_FILE, { force: true }),
+    ]);
+    try {
+      await fs.writeFile(path.join(process.cwd(), 'content', 'topics.json'), '[]', 'utf8');
+    } catch {}
+  }
 
   const topicFlags = Array.isArray(argv.topic)
     ? argv.topic

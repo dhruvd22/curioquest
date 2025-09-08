@@ -21,16 +21,27 @@ export async function saveBase64Webp(b64: string, outFile: string) {
 
 export async function renderImage(prompt: string, outFile: string, force = false) {
   const cli = await loadClient();
-  if (!cli) return false;
+  if (!cli) {
+    console.warn('Image generation client unavailable');
+    return false;
+  }
   if (!force) {
     try {
       await fs.access(outFile);
       return true;
     } catch {}
   }
-  const res = await cli.images.generate({ model: 'gpt-image-1', prompt, size: '1024x1024' });
-  const b64 = res?.data?.[0]?.b64_json;
-  if (!b64) return false;
-  await saveBase64Webp(b64, outFile);
-  return true;
+  try {
+    const res = await cli.images.generate({ model: 'gpt-image-1.5', prompt, size: '1024x1024' });
+    const b64 = res?.data?.[0]?.b64_json;
+    if (!b64) {
+      console.warn('Image generation returned no data');
+      return false;
+    }
+    await saveBase64Webp(b64, outFile);
+    return true;
+  } catch (e) {
+    console.error('Image render failed:', e);
+    return false;
+  }
 }
