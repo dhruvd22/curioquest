@@ -29,7 +29,7 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
       const rej = path.join(process.cwd(), '_rejects', `${slug}-${uuid()}.json`);
       await fs.mkdir(path.dirname(rej), { recursive: true });
       await fs.writeFile(rej, JSON.stringify({ story, errors: parsed.error.format() }, null, 2), 'utf8');
-      return { path: rej };
+      return { path: rej, ok: false };
     }
 
     let storyPath: string;
@@ -67,6 +67,6 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
     await fs.mkdir(`/tmp/${slug}`, { recursive: true });
     await fs.writeFile(`/tmp/${slug}/packager.json`, JSON.stringify({ storyPath }, null, 2), 'utf8');
 
-    return { path: storyPath };
+    return { path: storyPath, ok: true };
   },
 };

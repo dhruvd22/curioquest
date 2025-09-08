@@ -31,9 +31,9 @@ jobs:
         run: |
           TOPICS="${{ github.event.inputs.topics }}"
           if [ -n "$TOPICS" ]; then
-            npm run generate -- --images=render --topic "$TOPICS" --review-mode=off
+            npm run generate -- --images=render --topic "$TOPICS" --review-mode=off --force --concurrency=5
           else
-            npm run generate -- --images=render --all --review-mode=off
+            npm run generate -- --images=render --all --review-mode=off --force --concurrency=5
           fi
       - name: List generated files
         run: |

@@ -181,7 +181,7 @@ async function runTopic(
   }
 
   const packagerStart = Date.now();
-  await PackagerAgent.run({
+  const packaged = await PackagerAgent.run({
     slug,
     topic,
     draft: finalDraft,
@@ -190,6 +190,14 @@ async function runTopic(
     reviewMode,
   });
   timings.PackagerAgent = Date.now() - packagerStart;
+
+  if (!packaged.ok) {
+    try {
+      await fs.rm(assetDir, { recursive: true, force: true });
+    } catch {}
+    log('Packager rejected:', slug);
+    return { status: 'error', slug, ms: Date.now() - start, tokensIn: tokensOut, tokensOut, timings };
+  }
 
   log('Generated:', slug);
 
