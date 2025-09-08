@@ -5,7 +5,13 @@ import { readabilityStats } from "../lib/readability";
 const STORIES = path.join(process.cwd(), "content", "stories");
 
 (async () => {
-  const files = (await fs.readdir(STORIES)).filter(f => f.endsWith(".json"));
+  let files: string[] = [];
+  try {
+    files = (await fs.readdir(STORIES)).filter(f => f.endsWith(".json"));
+  } catch {
+    console.log("Story Readability Audit: no stories found");
+    return;
+  }
   console.log("Story Readability Audit");
   for (const f of files) {
     const story = JSON.parse(await fs.readFile(path.join(STORIES, f), "utf8"));
