@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { v4 as uuid } from 'uuid';
+import { randomUUID } from 'node:crypto';
 import { StorySchema } from '../../../schemas/story';
 import { Agent, PackagerInput, PackagerOutput } from './_types';
 
@@ -26,7 +26,7 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
     };
     const parsed = StorySchema.safeParse(story);
     if (!parsed.success) {
-      const rej = path.join(process.cwd(), '_rejects', `${slug}-${uuid()}.json`);
+      const rej = path.join(process.cwd(), '_rejects', `${slug}-${randomUUID()}.json`);
       await fs.mkdir(path.dirname(rej), { recursive: true });
       await fs.writeFile(rej, JSON.stringify({ story, errors: parsed.error.format() }, null, 2), 'utf8');
       return { path: rej, ok: false };

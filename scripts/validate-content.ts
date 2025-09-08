@@ -61,7 +61,7 @@ async function main() {
       if (strict) { error(msg); ok = false; } else { log(msg); }
     }
   }
-  for (const slug of storySlugs) {
+  for (const slug of Array.from(storySlugs)) {
     if (!assetSlugs.includes(slug)) {
       const msg = `Missing asset folder for story: ${slug}`;
       if (strict) { error(msg); ok = false; } else { log(msg); }
