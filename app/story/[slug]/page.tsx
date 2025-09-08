@@ -9,8 +9,14 @@ export const dynamicParams = false;
 const CONTENT_DIR = path.join(process.cwd(), "content", "stories");
 
 export async function generateStaticParams() {
-  const files = await fs.readdir(CONTENT_DIR);
-  return files.filter(f => f.endsWith(".json")).map(f => ({ slug: f.replace(/\.json$/, "") }));
+  try {
+    const files = await fs.readdir(CONTENT_DIR);
+    const slugs = files.filter((f) => f.endsWith(".json")).map((f) => ({ slug: f.replace(/\.json$/, "") }));
+    // Next.js static export requires at least one path for dynamic routes
+    return slugs.length > 0 ? slugs : [{ slug: "__placeholder__" }];
+  } catch {
+    return [{ slug: "__placeholder__" }];
+  }
 }
 
 type Story = {
