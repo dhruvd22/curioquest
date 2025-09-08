@@ -5,33 +5,37 @@ import { Agent, StoryInput, StoryDraft } from './_types';
 
 const TEMPS = [0.8, 0.95, 1.1];
 
+function makeFallbackDraft(topic: string, factGems: StoryInput['factGems']): StoryDraft {
+  return {
+    title: `${topic} Basics`,
+    phases: [
+      { type: 'hook', heading: `Exploring ${topic}`, body: `Let's learn about ${topic}.` },
+      { type: 'orientation', heading: `What are ${topic}?`, body: `${topic} in a nutshell.` },
+      { type: 'discovery', heading: `Digging into ${topic}`, body: `More about ${topic}.` },
+      { type: 'wow-panel', heading: `A wow moment`, body: `${topic} can be surprising!` },
+      { type: 'fact-gems', items: factGems.slice(0, 3) },
+      {
+        type: 'mini-quiz',
+        items: [
+          { q: `Where do ${topic} travel?`, choices: ['Space', 'Sea'], answer: 0 },
+          { q: `Are ${topic} fast?`, choices: ['Yes', 'No'], answer: 0 },
+        ],
+      },
+      { type: 'imagine', prompt: `Imagine using ${topic} for adventure.` },
+      {
+        type: 'wrap',
+        keyTakeaways: [`${topic} are fascinating`, `Learning about ${topic} is fun`],
+      },
+    ],
+  };
+}
+
 export const StoryAgent: Agent<StoryInput, StoryDraft[]> = {
   name: 'Story',
   async run({ slug, topic, phases, factGems, sources }) {
     await fs.mkdir(`/tmp/${slug}`, { recursive: true });
     if (!process.env.OPENAI_API_KEY) {
-      const base: StoryDraft = {
-        title: `${topic} Basics`,
-        phases: [
-          { type: 'hook', heading: `Exploring ${topic}`, body: `Let's learn about ${topic}.` },
-          { type: 'orientation', heading: `What are ${topic}?`, body: `${topic} in a nutshell.` },
-          { type: 'discovery', heading: `Digging into ${topic}`, body: `More about ${topic}.` },
-          { type: 'wow-panel', heading: `A wow moment`, body: `${topic} can be surprising!` },
-          { type: 'fact-gems', items: factGems.slice(0, 3) },
-          {
-            type: 'mini-quiz',
-            items: [
-              { q: `Where do ${topic} travel?`, choices: ['Space', 'Sea'], answer: 0 },
-              { q: `Are ${topic} fast?`, choices: ['Yes', 'No'], answer: 0 },
-            ],
-          },
-          { type: 'imagine', prompt: `Imagine using ${topic} for adventure.` },
-          {
-            type: 'wrap',
-            keyTakeaways: [`${topic} are fascinating`, `Learning about ${topic} is fun`],
-          },
-        ],
-      };
+      const base = makeFallbackDraft(topic, factGems);
       const drafts = [base, base, base];
       for (let i = 0; i < drafts.length; i++) {
         await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(drafts[i], null, 2), 'utf8');
@@ -55,10 +59,19 @@ export const StoryAgent: Agent<StoryInput, StoryDraft[]> = {
         2
       )}\nWrite a 900–1100 word, phase-segmented story. Make the hook irresistible; in discovery scenes, show concrete sensory details.\nThe WOW panel must present one striking comparison grounded in the facts (no exaggeration).\nInclude exactly 3 "Did you know?" fact-gems (using provided sourceIds), and 2–3 mini-quiz MCQs with unambiguous answers.\nKeep it PG, inclusive, and grade ~6 reading level. Shorten paragraphs near the end. End with a single-sentence "imagine" prompt.`;
       const { text } = await callResponse({ instructions: SYSTEM_STORY, input, temperature: TEMPS[i] });
-      const jsonText = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
-      const draft = JSON.parse(jsonText);
-      drafts.push(draft);
-      await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(draft, null, 2), 'utf8');
+      try {
+        const start = text.indexOf('{');
+        const end = text.lastIndexOf('}');
+        if (start === -1 || end === -1) throw new Error('Missing JSON object');
+        const jsonText = text.slice(start, end + 1);
+        const draft = JSON.parse(jsonText);
+        drafts.push(draft);
+        await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(draft, null, 2), 'utf8');
+      } catch (err) {
+        const fallback = makeFallbackDraft(topic, factGems);
+        drafts.push(fallback);
+        await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(fallback, null, 2), 'utf8');
+      }
     }
     return drafts;
   },

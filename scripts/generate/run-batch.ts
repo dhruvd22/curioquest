@@ -262,9 +262,13 @@ async function main() {
   } catch {}
   const checkpointSet = new Set(checkpoint);
 
+  const hasExplicitTopics = topicFlags.length > 0;
+
   const records: RecordEntry[] = topics.map((t) => ({
     topic: t,
-    status: !force && !all && checkpointSet.has(t) ? 'skipped' : 'pending',
+    status: !force && !all && !hasExplicitTopics && checkpointSet.has(t)
+      ? 'skipped'
+      : 'pending',
   }));
 
   const topicsToRun = records.filter((r) => r.status === 'pending');
