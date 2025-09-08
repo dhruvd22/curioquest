@@ -8,15 +8,6 @@ on:
         required: false
         type: string
         default: ""
-      images:
-        description: "Image handling"
-        required: true
-        type: choice
-        default: skip
-        options:
-          - skip
-          - render
-          - stock
 
 permissions:
   contents: write
@@ -36,14 +27,19 @@ jobs:
       - name: Generate content
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BUDGET_USD: "20"
         run: |
           TOPICS="${{ github.event.inputs.topics }}"
           if [ -n "$TOPICS" ]; then
-            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --no-review-mode --topic "$TOPICS"
+            npm run generate -- --images=render --topic "$TOPICS" --review-mode=off
           else
-            npm run generate -- --images=${{ github.event.inputs.images || 'skip' }} --no-review-mode --all
+            npm run generate -- --images=render --all --review-mode=off
           fi
-      - run: npm run validate && npm run audit && npm run cleanup
+      - name: List generated files
+        run: |
+          find content/stories -maxdepth 1 -type f | sort
+          find public/assets -maxdepth 2 -type f | sort | head -n 20
+      - run: npm run validate -- --strict && npm run audit && npm run cleanup
       - name: Commit and push
         run: |
           git config user.name "github-actions"
@@ -52,6 +48,16 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update generated content"
+            git commit -m "chore: add generated stories and images"
             git push
           fi
+      - name: Upload generator artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generator-artifacts
+          path: |
+            .ai_logs/**
+            review/**
+            _rejects/**
+          if-no-files-found: ignore

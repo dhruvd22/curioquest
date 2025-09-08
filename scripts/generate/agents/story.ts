@@ -41,15 +41,19 @@ export const StoryAgent: Agent<StoryInput, StoryDraft[]> = {
 
     const drafts: StoryDraft[] = [];
     for (let i = 0; i < TEMPS.length; i++) {
-      const input = `Topic: ${topic}\nOutline (JSON): ${JSON.stringify(
-        { phases, factGems },
+      const input = `Topic: ${topic}\nTone tags: playful, adventurous, science-forward\nFacts (with sourceIds): ${JSON.stringify(
+        factGems,
+        null,
+        2
+      )}\nOutline (phases): ${JSON.stringify(
+        phases,
         null,
         2
       )}\nSources (JSON): ${JSON.stringify(
         sources,
         null,
         2
-      )}\nWrite a story JSON following schemas/story.ts. Use exactly these fact-gems and include 2-3 quiz items with clear answers.`;
+      )}\nWrite a 900–1100 word, phase-segmented story. Make the hook irresistible; in discovery scenes, show concrete sensory details.\nThe WOW panel must present one striking comparison grounded in the facts (no exaggeration).\nInclude exactly 3 "Did you know?" fact-gems (using provided sourceIds), and 2–3 mini-quiz MCQs with unambiguous answers.\nKeep it PG, inclusive, and grade ~6 reading level. Shorten paragraphs near the end. End with a single-sentence "imagine" prompt.`;
       const { text } = await callResponse({ instructions: SYSTEM_STORY, input, temperature: TEMPS[i] });
       const jsonText = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
       const draft = JSON.parse(jsonText);
