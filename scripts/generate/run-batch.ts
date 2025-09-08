@@ -238,9 +238,16 @@ function displayProgress(records: RecordEntry[]) {
 
 async function main() {
   const argv = mri(process.argv.slice(2), {
-    string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
-    boolean: ['force', 'review-mode', 'clean'],
-    default: { images: 'render', concurrency: '20', 'review-mode': false, clean: true },
+    string: [
+      'topic',
+      'images',
+      'concurrency',
+      'max-ms-per-topic',
+      'max-chars',
+      'review-mode',
+    ],
+    boolean: ['force', 'clean'],
+    default: { images: 'render', concurrency: '20', 'review-mode': 'off', clean: true },
   });
 
   const force = !!argv.force;
@@ -252,7 +259,10 @@ async function main() {
     ? parseInt(argv['max-ms-per-topic'], 10)
     : Infinity;
   const maxChars = argv['max-chars'] ? parseInt(argv['max-chars'], 10) : Infinity;
-  const reviewMode = argv['review-mode'] as boolean;
+  const reviewMode =
+    typeof argv['review-mode'] === 'string'
+      ? !['false', 'off', '0', 'no'].includes(argv['review-mode'].toLowerCase())
+      : Boolean(argv['review-mode']);
   const budget = new Budget();
 
   if (clean) {
