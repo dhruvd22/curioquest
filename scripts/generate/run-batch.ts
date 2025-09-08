@@ -52,23 +52,29 @@ async function runTopic(
   budget: Budget
 ): Promise<RunResult> {
   const slug = slugify(topic);
+  const finalPath = path.join(CONTENT, `${slug}.json`);
+  const assetDir = path.join(process.cwd(), 'public', 'assets', slug);
   const timings: Record<string, number> = {};
   let tokensOut = 0;
   const start = Date.now();
 
-  const curatorStart = Date.now();
-  const curator = await CuratorAgent.run({ topic, slug });
-  timings.CuratorAgent = Date.now() - curatorStart;
-  tokensOut += JSON.stringify(curator).length;
-
-  const finalPath = path.join(CONTENT, `${slug}.json`);
-  if (!force) {
+  if (force) {
+    await Promise.all([
+      fs.rm(finalPath, { force: true }),
+      fs.rm(assetDir, { recursive: true, force: true }),
+    ]);
+  } else {
     try {
       await fs.access(finalPath);
       log('Skip (exists):', slug);
       return { status: 'skipped', slug, ms: 0, tokensIn: 0, tokensOut: 0, timings };
     } catch {}
   }
+
+  const curatorStart = Date.now();
+  const curator = await CuratorAgent.run({ topic, slug });
+  timings.CuratorAgent = Date.now() - curatorStart;
+  tokensOut += JSON.stringify(curator).length;
 
   log('Start:', slug);
 
@@ -133,7 +139,6 @@ async function runTopic(
   tokensOut += JSON.stringify(judge).length;
   const finalDraft = verifiedDrafts[judge.chosenIndex] || verifiedDrafts[0];
 
-  const assetDir = path.join(process.cwd(), 'public', 'assets', slug);
   await fs.mkdir(assetDir, { recursive: true });
   const heroFile = path.join(assetDir, 'hero.webp');
 
@@ -149,7 +154,7 @@ async function runTopic(
     tokensOut += JSON.stringify(art).length;
     images.hero.alt = art.hero.alt;
     if (imageMode === 'render' && art.hero.license === 'render') {
-      await renderImage(art.hero.prompt, heroFile);
+      await renderImage(art.hero.prompt, heroFile, force);
     } else {
       try {
         await fs.access(heroFile);
@@ -162,7 +167,7 @@ async function runTopic(
       const fname = `support-${i + 1}.webp`;
       const fpath = path.join(assetDir, fname);
       if (imageMode === 'render' && img.license === 'render') {
-        await renderImage(img.prompt, fpath);
+        await renderImage(img.prompt, fpath, force);
       } else {
         try {
           await fs.access(fpath);
@@ -304,6 +309,10 @@ async function main() {
       if (!current) break;
       current.status = 'running';
       displayProgress(records);
+      if (force) {
+        checkpointSet.delete(current.topic);
+        await saveCheckpoints();
+      }
       const run =
         maxMsPerTopic === Infinity
           ? await runTopic(current.topic, force, imageMode, reviewMode, budget)
@@ -343,6 +352,7 @@ async function main() {
         current.ms = maxMsPerTopic;
       } else {
         current.status = 'error';
+        if (force) await saveCheckpoints();
       }
       displayProgress(records);
       if (totalChars >= maxChars) {
