@@ -1,0 +1,101 @@
+{
+  "slug": "space-stations",
+  "title": "Space Stations Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/space-stations/hero.webp",
+    "alt": "A colorful space station in orbit around Earth with astronauts conducting experiments in a starry sky."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-international-space-station-mockup-training_52233924879_o"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Space Stations",
+      "body": "Let's learn about Space Stations. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Space Stations play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Space Stations?",
+      "body": "Space Stations in a nutshell. Understanding the basics of Space Stations helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Space Stations."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Space Stations",
+      "body": "More about Space Stations. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Space Stations. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Space Stations can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Space Stations truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Astronauts train in a super cool mockup of the International Space Station at NASA, practicing everything they’ll do in space!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The ISS zooms around Earth at an incredible speed, making a complete orbit every 90 minutes!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Living in space is like being in a giant science lab, where astronauts float while conducting exciting experiments!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Space Stations travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Space Stations fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Space Stations?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Space Stations for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Space Stations."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Space Stations are fascinating",
+        "Learning about Space Stations is fun",
+        "There is always more to discover about Space Stations"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

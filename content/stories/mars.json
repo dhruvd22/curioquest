@@ -1,0 +1,101 @@
+{
+  "slug": "mars",
+  "title": "Mars Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/mars/hero.webp",
+    "alt": "A child in a space suit exploring Mars, holding a flag, with red rocks and an orange sky."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Mars",
+      "url": "https://en.wikipedia.org/wiki/Mars"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Mars",
+      "body": "Let's learn about Mars. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Mars play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Mars?",
+      "body": "Mars in a nutshell. Understanding the basics of Mars helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Mars."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Mars",
+      "body": "More about Mars. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Mars. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Mars can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Mars truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Mars is the fourth planet from the Sun, making it our neighbor in the solar system."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Known as the 'Red Planet', it gets its color from iron oxide, or rust, on its surface."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Mars is like a chilly desert, with a thin atmosphere that makes it hard to breathe!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Mars travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Mars fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Mars?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Mars for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Mars."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Mars are fascinating",
+        "Learning about Mars is fun",
+        "There is always more to discover about Mars"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

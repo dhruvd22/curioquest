@@ -1,0 +1,101 @@
+{
+  "slug": "moon",
+  "title": "Moon Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/moon/hero.webp",
+    "alt": "A child looking up at a large glowing moon in a starry sky, surrounded by flowers and fireflies."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Moon",
+      "url": "https://en.wikipedia.org/wiki/Moon"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Moon",
+      "body": "Let's learn about Moon. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Moon play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Moon?",
+      "body": "Moon in a nutshell. Understanding the basics of Moon helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Moon."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Moon",
+      "body": "More about Moon. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Moon. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Moon can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Moon truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "The Moon is like Earth’s loyal buddy, always by our side!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "It’s about 30 times wider than our planet—imagine that!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The Moon spins and orbits in perfect harmony, just like a dance!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Moon travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Moon fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Moon?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Moon for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Moon."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Moon are fascinating",
+        "Learning about Moon is fun",
+        "There is always more to discover about Moon"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "prime-numbers",
+  "title": "Prime Numbers Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/prime-numbers/hero.webp",
+    "alt": "A curious child exploring a colorful world filled with prime number symbols and playful animals, depicted in vibrant watercolor."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Prime number",
+      "url": "https://en.wikipedia.org/wiki/Prime_number"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Prime Numbers",
+      "body": "Let's learn about Prime Numbers. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Prime Numbers play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Prime Numbers?",
+      "body": "Prime Numbers in a nutshell. Understanding the basics of Prime Numbers helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Prime Numbers."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Prime Numbers",
+      "body": "More about Prime Numbers. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Prime Numbers. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Prime Numbers can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Prime Numbers truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "A prime number is like a superhero number; it stands alone and can't be made by multiplying smaller numbers together!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Composite numbers are like team players; they can be formed by multiplying smaller numbers together, just like a team working together!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Every number greater than 1 is either a lone wolf (prime) or can be built using a special recipe of superhero numbers (primes)!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Prime Numbers travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Prime Numbers fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Prime Numbers?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Prime Numbers for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Prime Numbers."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Prime Numbers are fascinating",
+        "Learning about Prime Numbers is fun",
+        "There is always more to discover about Prime Numbers"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

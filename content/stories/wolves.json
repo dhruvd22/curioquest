@@ -1,0 +1,101 @@
+{
+  "slug": "wolves",
+  "title": "Wolves Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/wolves/hero.webp",
+    "alt": "A majestic wolf standing on a rocky hill, overlooking a vibrant forest at sunrise."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Wolf",
+      "url": "https://en.wikipedia.org/wiki/Wolf"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Wolves",
+      "body": "Let's learn about Wolves. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Wolves play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Wolves?",
+      "body": "Wolves in a nutshell. Understanding the basics of Wolves helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Wolves."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Wolves",
+      "body": "More about Wolves. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Wolves. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Wolves can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Wolves truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Wolves are the biggest wild dogs in the family, with cool features like less pointy ears and a long, bushy tail!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Did you know there are over thirty types of wolves? Some of them are even related to our furry friends, the dogs!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Wolves can have fur in all sorts of colors, like white, brown, grey, and black—perfect for blending into their surroundings!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Wolves travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Wolves fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Wolves?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Wolves for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Wolves."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Wolves are fascinating",
+        "Learning about Wolves is fun",
+        "There is always more to discover about Wolves"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

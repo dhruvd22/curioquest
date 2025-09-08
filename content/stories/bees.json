@@ -1,0 +1,106 @@
+{
+  "slug": "bees",
+  "title": "Bees Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/bees/hero.webp",
+    "alt": "A cheerful bee character in an explorer's hat flying over a colorful flower garden."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Bee",
+      "url": "https://en.wikipedia.org/wiki/Bee"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA17315"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Bees",
+      "body": "Let's learn about Bees. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Bees play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Bees?",
+      "body": "Bees in a nutshell. Understanding the basics of Bees helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Bees."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Bees",
+      "body": "More about Bees. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Bees. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Bees can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Bees truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Did you know there are over 20,000 types of bees buzzing around the world? That’s like having a whole army of tiny superheroes!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "While some bees live in big families called colonies, most prefer to go solo, just like a lone wolf but with wings!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The coolest bees, like honey bees, build their homes in hexagon-shaped hives. It’s like they’re little architects of the insect world!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Bees travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Bees fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Bees?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Bees for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Bees."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Bees are fascinating",
+        "Learning about Bees is fun",
+        "There is always more to discover about Bees"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

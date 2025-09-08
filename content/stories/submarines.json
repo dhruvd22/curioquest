@@ -1,0 +1,106 @@
+{
+  "slug": "submarines",
+  "title": "Submarines Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/submarines/hero.webp",
+    "alt": "A cheerful submarine exploring the ocean with colorful fish and coral."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Submarine",
+      "url": "https://en.wikipedia.org/wiki/Submarine"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-6900905"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Submarines",
+      "body": "Let's learn about Submarines. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Submarines play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Submarines?",
+      "body": "Submarines in a nutshell. Understanding the basics of Submarines helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Submarines."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Submarines",
+      "body": "More about Submarines. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Submarines. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Submarines can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Submarines truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Submarines are like magical boats that can dive deep into the ocean all by themselves!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Even though they can be huge, submarines are always called 'boats'—isn't that funny?"
+        },
+        {
+          "sourceId": "s2",
+          "text": "The 'Ben Franklin' is a special submarine named after a famous inventor who loved exploring!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Submarines travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Submarines fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Submarines?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Submarines for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Submarines."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Submarines are fascinating",
+        "Learning about Submarines is fun",
+        "There is always more to discover about Submarines"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

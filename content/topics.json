@@ -10,5 +10,245 @@
     "title": "Trains",
     "thumbnail": "/assets/trains/hero.webp",
     "badges": []
+  },
+  {
+    "slug": "rockets",
+    "title": "Rockets",
+    "thumbnail": "/assets/rockets/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "black-holes",
+    "title": "Black Holes",
+    "thumbnail": "/assets/black-holes/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "space-stations",
+    "title": "Space Stations",
+    "thumbnail": "/assets/space-stations/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "moon",
+    "title": "Moon",
+    "thumbnail": "/assets/moon/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "mars",
+    "title": "Mars",
+    "thumbnail": "/assets/mars/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "comets-and-asteroids",
+    "title": "Comets & Asteroids",
+    "thumbnail": "/assets/comets-and-asteroids/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "exoplanets",
+    "title": "Exoplanets",
+    "thumbnail": "/assets/exoplanets/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "deep-space-telescopes",
+    "title": "Deep Space Telescopes",
+    "thumbnail": "/assets/deep-space-telescopes/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "volcanoes",
+    "title": "Volcanoes",
+    "thumbnail": "/assets/volcanoes/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "earthquakes",
+    "title": "Earthquakes",
+    "thumbnail": "/assets/earthquakes/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "coral-reefs",
+    "title": "Coral Reefs",
+    "thumbnail": "/assets/coral-reefs/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "glaciers-and-icebergs",
+    "title": "Glaciers & Icebergs",
+    "thumbnail": "/assets/glaciers-and-icebergs/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "rainforests",
+    "title": "Rainforests",
+    "thumbnail": "/assets/rainforests/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "deserts",
+    "title": "Deserts",
+    "thumbnail": "/assets/deserts/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "the-deep-sea",
+    "title": "The Deep Sea",
+    "thumbnail": "/assets/the-deep-sea/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "whales",
+    "title": "Whales",
+    "thumbnail": "/assets/whales/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "wolves",
+    "title": "Wolves",
+    "thumbnail": "/assets/wolves/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "weather-extremes",
+    "title": "Weather Extremes",
+    "thumbnail": "/assets/weather-extremes/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "dogs",
+    "title": "Dogs",
+    "thumbnail": "/assets/dogs/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "octopuses",
+    "title": "Octopuses",
+    "thumbnail": "/assets/octopuses/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "birds-of-prey",
+    "title": "Birds of Prey",
+    "thumbnail": "/assets/birds-of-prey/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "bees",
+    "title": "Bees",
+    "thumbnail": "/assets/bees/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "dinosaurs",
+    "title": "Dinosaurs",
+    "thumbnail": "/assets/dinosaurs/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "elephants",
+    "title": "Elephants",
+    "thumbnail": "/assets/elephants/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "bridges",
+    "title": "Bridges",
+    "thumbnail": "/assets/bridges/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "skyscrapers",
+    "title": "Skyscrapers",
+    "thumbnail": "/assets/skyscrapers/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "high-speed-trains",
+    "title": "High-Speed Trains",
+    "thumbnail": "/assets/high-speed-trains/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "robots",
+    "title": "Robots",
+    "thumbnail": "/assets/robots/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "drones",
+    "title": "Drones",
+    "thumbnail": "/assets/drones/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "renewable-energy-wind-and-solar",
+    "title": "Renewable Energy (Wind & Solar)",
+    "thumbnail": "/assets/renewable-energy-wind-and-solar/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "submarines",
+    "title": "Submarines",
+    "thumbnail": "/assets/submarines/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "ancient-egypt",
+    "title": "Ancient Egypt",
+    "thumbnail": "/assets/ancient-egypt/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "ai-and-pattern-recognition",
+    "title": "AI & Pattern Recognition",
+    "thumbnail": "/assets/ai-and-pattern-recognition/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "roman-engineering",
+    "title": "Roman Engineering",
+    "thumbnail": "/assets/roman-engineering/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "the-silk-road",
+    "title": "The Silk Road",
+    "thumbnail": "/assets/the-silk-road/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "printing-press",
+    "title": "Printing Press",
+    "thumbnail": "/assets/printing-press/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "prime-numbers",
+    "title": "Prime Numbers",
+    "thumbnail": "/assets/prime-numbers/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "fractals",
+    "title": "Fractals",
+    "thumbnail": "/assets/fractals/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "symmetry",
+    "title": "Symmetry",
+    "thumbnail": "/assets/symmetry/hero.webp",
+    "badges": []
+  },
+  {
+    "slug": "infinity",
+    "title": "Infinity",
+    "thumbnail": "/assets/infinity/hero.webp",
+    "badges": []
   }
 ]

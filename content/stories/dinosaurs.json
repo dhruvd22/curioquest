@@ -1,0 +1,101 @@
+{
+  "slug": "dinosaurs",
+  "title": "Dinosaurs Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/dinosaurs/hero.webp",
+    "alt": "A cheerful Triceratops in a colorful prehistoric landscape with other dinosaurs."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Dinosaur",
+      "url": "https://en.wikipedia.org/wiki/Dinosaur"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Dinosaurs",
+      "body": "Let's learn about Dinosaurs. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Dinosaurs play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Dinosaurs?",
+      "body": "Dinosaurs in a nutshell. Understanding the basics of Dinosaurs helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Dinosaurs."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Dinosaurs",
+      "body": "More about Dinosaurs. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Dinosaurs. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Dinosaurs can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Dinosaurs truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Dinosaurs were a wild bunch of reptiles, each one unique and amazing in its own way!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Imagine dinosaurs appearing over 240 million years ago, long before humans even existed!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "After a big extinction event, dinosaurs took over the planet and ruled for millions of years!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Dinosaurs travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Dinosaurs fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Dinosaurs?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Dinosaurs for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Dinosaurs."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Dinosaurs are fascinating",
+        "Learning about Dinosaurs is fun",
+        "There is always more to discover about Dinosaurs"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "birds-of-prey",
+  "title": "Birds of Prey Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/birds-of-prey/hero.webp",
+    "alt": "A majestic eagle soaring in a bright blue sky above a green landscape."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Bird of prey",
+      "url": "https://en.wikipedia.org/wiki/Bird_of_prey"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-KSC-03pd2984"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Birds of Prey",
+      "body": "Let's learn about Birds of Prey. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Birds of Prey play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Birds of Prey?",
+      "body": "Birds of Prey in a nutshell. Understanding the basics of Birds of Prey helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Birds of Prey."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Birds of Prey",
+      "body": "More about Birds of Prey. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Birds of Prey. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Birds of Prey can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Birds of Prey truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Birds of prey are like nature's superheroes, swooping down to catch their meals with their sharp talons and powerful beaks!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "These amazing birds can spot their dinner from high in the sky, thanks to their super keen eyesight!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "In places like the Merritt Island Wildlife Refuge, you can find a variety of birds, including great blue herons that are expert hunters!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Birds of Prey travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Birds of Prey fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Birds of Prey?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Birds of Prey for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Birds of Prey."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Birds of Prey are fascinating",
+        "Learning about Birds of Prey is fun",
+        "There is always more to discover about Birds of Prey"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

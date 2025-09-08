@@ -1,0 +1,106 @@
+{
+  "slug": "fractals",
+  "title": "Fractals Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/fractals/hero.webp",
+    "alt": "A child exploring a colorful landscape with fractal patterns in nature, holding a magnifying glass, representing curiosity and discovery."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Fractal",
+      "url": "https://en.wikipedia.org/wiki/Fractal"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-GSFC_20171208_Archive_e001880"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Fractals",
+      "body": "Let's learn about Fractals. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Fractals play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Fractals?",
+      "body": "Fractals in a nutshell. Understanding the basics of Fractals helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Fractals."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Fractals",
+      "body": "More about Fractals. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Fractals. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Fractals can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Fractals truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Fractals are like magical shapes that keep showing the same patterns no matter how close you look!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "When you zoom in on a fractal, you find more of the same patterns, just like a never-ending treasure hunt!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that clouds can form beautiful fractal patterns? Just look up and see if you can spot them!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Fractals travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Fractals fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Fractals?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Fractals for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Fractals."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Fractals are fascinating",
+        "Learning about Fractals is fun",
+        "There is always more to discover about Fractals"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "rockets",
+  "title": "Rockets Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/rockets/hero.webp",
+    "alt": "A cheerful rocket launching into a starry space, embodying the excitement of exploration."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Rocket",
+      "url": "https://en.wikipedia.org/wiki/Rocket"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-KSC-20230530-PH-RKL02_0004"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Rockets",
+      "body": "Let's learn about Rockets. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Rockets play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Rockets?",
+      "body": "Rockets in a nutshell. Understanding the basics of Rockets helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Rockets."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Rockets",
+      "body": "More about Rockets. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Rockets. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Rockets can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Rockets truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Rockets are like magical vehicles that zoom through space without needing air!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Rocket engines are super cool! They push out gas really fast to make the rocket fly up, up, and away!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "In space, rockets can soar even better because there’s no air to slow them down!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Rockets travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Rockets fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Rockets?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Rockets for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Rockets."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Rockets are fascinating",
+        "Learning about Rockets is fun",
+        "There is always more to discover about Rockets"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

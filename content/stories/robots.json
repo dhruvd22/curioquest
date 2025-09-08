@@ -1,0 +1,106 @@
+{
+  "slug": "robots",
+  "title": "Robots Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/robots/hero.webp",
+    "alt": "A cheerful robot in a colorful landscape, surrounded by other robots performing tasks like watering plants and painting."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Robot",
+      "url": "https://en.wikipedia.org/wiki/Robot"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-MSFC-1700198"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Robots",
+      "body": "Let's learn about Robots. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Robots play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Robots?",
+      "body": "Robots in a nutshell. Understanding the basics of Robots helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Robots."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Robots",
+      "body": "More about Robots. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Robots. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Robots can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Robots truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Imagine a robot as a super-smart machine that can do all sorts of tasks without needing a break!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Some robots can look like people, but most are built to get things done quickly and efficiently."
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that students can build their own robots and compete in exciting challenges? It's like a science fair but with robots!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Robots travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Robots fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Robots?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Robots for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Robots."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Robots are fascinating",
+        "Learning about Robots is fun",
+        "There is always more to discover about Robots"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

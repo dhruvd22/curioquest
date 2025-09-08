@@ -1,0 +1,106 @@
+{
+  "slug": "rainforests",
+  "title": "Rainforests Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/rainforests/hero.webp",
+    "alt": "A colorful rainforest filled with tall trees, bright birds, and monkeys, showcasing the beauty of nature."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Rainforest",
+      "url": "https://en.wikipedia.org/wiki/Rainforest"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA11420"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Rainforests",
+      "body": "Let's learn about Rainforests. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Rainforests play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Rainforests?",
+      "body": "Rainforests in a nutshell. Understanding the basics of Rainforests helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Rainforests."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Rainforests",
+      "body": "More about Rainforests. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Rainforests. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Rainforests can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Rainforests truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Rainforests are like nature's skyscrapers, with trees reaching high up into the sky, creating a leafy roof that keeps the ground shady and cool!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "There are two main types of rainforests: tropical ones that are warm and humid, and temperate ones that are cooler and often found in places with four seasons."
+        },
+        {
+          "sourceId": "s2",
+          "text": "In Brazil, satellite images show how lush green rainforests are being replaced by bare fields, reminding us how important it is to take care of our planet!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Rainforests travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Rainforests fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Rainforests?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Rainforests for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Rainforests."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Rainforests are fascinating",
+        "Learning about Rainforests is fun",
+        "There is always more to discover about Rainforests"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

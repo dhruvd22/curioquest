@@ -1,0 +1,101 @@
+{
+  "slug": "the-deep-sea",
+  "title": "The Deep Sea Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/the-deep-sea/hero.webp",
+    "alt": "A child in a scuba suit exploring the deep sea, surrounded by glowing jellyfish and colorful fish, with underwater volcanoes in the background."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA12080"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring The Deep Sea",
+      "body": "Let's learn about The Deep Sea. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, The Deep Sea play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are The Deep Sea?",
+      "body": "The Deep Sea in a nutshell. Understanding the basics of The Deep Sea helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about The Deep Sea."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into The Deep Sea",
+      "body": "More about The Deep Sea. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about The Deep Sea. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "The Deep Sea can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable The Deep Sea truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Did you know that scientists think there might be a hidden ocean beneath the icy surface of Enceladus? It could be teeming with life!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The deep sea is home to creatures that can glow in the dark! Imagine swimming alongside a glowing jellyfish!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Underwater volcanoes create unique habitats where strange and wonderful creatures thrive, far away from sunlight!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do The Deep Sea travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are The Deep Sea fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore The Deep Sea?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using The Deep Sea for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by The Deep Sea."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "The Deep Sea are fascinating",
+        "Learning about The Deep Sea is fun",
+        "There is always more to discover about The Deep Sea"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

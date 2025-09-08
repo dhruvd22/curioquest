@@ -1,0 +1,101 @@
+{
+  "slug": "exoplanets",
+  "title": "Exoplanets Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/exoplanets/hero.webp",
+    "alt": "A child looking up at a starry sky filled with colorful exoplanets while holding a telescope, exuding wonder."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Exoplanet",
+      "url": "https://en.wikipedia.org/wiki/Exoplanet"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Exoplanets",
+      "body": "Let's learn about Exoplanets. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Exoplanets play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Exoplanets?",
+      "body": "Exoplanets in a nutshell. Understanding the basics of Exoplanets helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Exoplanets."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Exoplanets",
+      "body": "More about Exoplanets. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Exoplanets. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Exoplanets can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Exoplanets truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "An exoplanet is like a hidden treasure, a planet that orbits a star far, far away from our Solar System!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Since 1992, scientists have been uncovering the secrets of exoplanets, with nearly 6,000 confirmed so far!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Imagine 1,001 planetary systems with more than one planet—it's like a cosmic family reunion!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Exoplanets travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Exoplanets fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Exoplanets?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Exoplanets for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Exoplanets."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Exoplanets are fascinating",
+        "Learning about Exoplanets is fun",
+        "There is always more to discover about Exoplanets"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

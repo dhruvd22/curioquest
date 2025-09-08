@@ -1,0 +1,101 @@
+{
+  "slug": "the-silk-road",
+  "title": "The Silk Road Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/the-silk-road/hero.webp",
+    "alt": "A child exploring the Silk Road with a map, surrounded by vibrant landscapes and ancient caravans."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Silk Road",
+      "url": "https://en.wikipedia.org/wiki/Silk_Road"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring The Silk Road",
+      "body": "Let's learn about The Silk Road. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, The Silk Road play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are The Silk Road?",
+      "body": "The Silk Road in a nutshell. Understanding the basics of The Silk Road helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about The Silk Road."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into The Silk Road",
+      "body": "More about The Silk Road. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about The Silk Road. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "The Silk Road can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable The Silk Road truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "The Silk Road was a super-long trade route, stretching over 6,400 kilometers, connecting cultures and ideas."
+        },
+        {
+          "sourceId": "s1",
+          "text": "The name 'Silk Road' was invented in the late 1800s, but some people think 'Silk Routes' is a better name."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Some historians argue that the term 'Silk Road' ignores the contributions of nomadic traders who were just as important."
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do The Silk Road travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are The Silk Road fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore The Silk Road?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using The Silk Road for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by The Silk Road."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "The Silk Road are fascinating",
+        "Learning about The Silk Road is fun",
+        "There is always more to discover about The Silk Road"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

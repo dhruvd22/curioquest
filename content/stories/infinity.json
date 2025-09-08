@@ -1,0 +1,106 @@
+{
+  "slug": "infinity",
+  "title": "Infinity Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/infinity/hero.webp",
+    "alt": "A curious child gazing at a starry universe with the glowing infinity symbol in the sky."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Infinity",
+      "url": "https://en.wikipedia.org/wiki/Infinity"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-SSC-20120411-S00494SE"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Infinity",
+      "body": "Let's learn about Infinity. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Infinity play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Infinity?",
+      "body": "Infinity in a nutshell. Understanding the basics of Infinity helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Infinity."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Infinity",
+      "body": "More about Infinity. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Infinity. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Infinity can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Infinity truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Infinity is like a magical number that never ends, no matter how high you count!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The infinity symbol looks like a sideways figure eight, and it represents endless possibilities!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "At NASA's INFINITY center, kids can see amazing things like moon rocks and learn about the universe!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Infinity travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Infinity fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Infinity?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Infinity for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Infinity."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Infinity are fascinating",
+        "Learning about Infinity is fun",
+        "There is always more to discover about Infinity"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

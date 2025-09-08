@@ -1,0 +1,106 @@
+{
+  "slug": "volcanoes",
+  "title": "Volcanoes Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/volcanoes/hero.webp",
+    "alt": "Children observing an erupting volcano, depicting curiosity and excitement."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Volcano",
+      "url": "https://en.wikipedia.org/wiki/Volcano"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-calbuco-volcano-erupts-in-southern-chile_17069947000_o"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Volcanoes",
+      "body": "Let's learn about Volcanoes. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Volcanoes play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Volcanoes?",
+      "body": "Volcanoes in a nutshell. Understanding the basics of Volcanoes helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Volcanoes."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Volcanoes",
+      "body": "More about Volcanoes. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Volcanoes. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Volcanoes can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Volcanoes truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Volcanoes are like nature's fireworks, where hot lava and ash burst out from deep inside the Earth!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that Calbuco Volcano in Chile erupted for the first time in over 40 years? That's a long nap for a sleeping giant!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "There are different types of volcanoes, each with its own personality—some are gentle giants, while others are fierce and explosive!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Volcanoes travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Volcanoes fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Volcanoes?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Volcanoes for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Volcanoes."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Volcanoes are fascinating",
+        "Learning about Volcanoes is fun",
+        "There is always more to discover about Volcanoes"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

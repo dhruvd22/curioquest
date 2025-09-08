@@ -1,0 +1,106 @@
+{
+  "slug": "bridges",
+  "title": "Bridges Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/bridges/hero.webp",
+    "alt": "Children exploring a colorful bridge over a river, surrounded by nature."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Bridge",
+      "url": "https://en.wikipedia.org/wiki/Bridge"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-KSC-20230609-PH-JBS01-0165"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Bridges",
+      "body": "Let's learn about Bridges. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Bridges play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Bridges?",
+      "body": "Bridges in a nutshell. Understanding the basics of Bridges helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Bridges."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Bridges",
+      "body": "More about Bridges. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Bridges. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Bridges can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Bridges truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Bridges are like magical pathways that help us cross rivers, roads, and even deep valleys!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Every bridge has its own unique design, just like how every superhero has their special powers!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that the Indian River Bridge is not just any bridge? It connects to NASA, where rockets are launched into space!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Bridges travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Bridges fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Bridges?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Bridges for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Bridges."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Bridges are fascinating",
+        "Learning about Bridges is fun",
+        "There is always more to discover about Bridges"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

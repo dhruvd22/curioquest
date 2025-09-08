@@ -1,0 +1,106 @@
+{
+  "slug": "roman-engineering",
+  "title": "Roman Engineering Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/roman-engineering/hero.webp",
+    "alt": "A child gazing in wonder at a Roman aqueduct, illustrating the marvels of Roman engineering."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Ancient Roman engineering",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Roman_engineering"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA25435"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Roman Engineering",
+      "body": "Let's learn about Roman Engineering. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Roman Engineering play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Roman Engineering?",
+      "body": "Roman Engineering in a nutshell. Understanding the basics of Roman Engineering helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Roman Engineering."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Roman Engineering",
+      "body": "More about Roman Engineering. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Roman Engineering. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Roman Engineering can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Roman Engineering truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "The Romans were like the superheroes of engineering, building amazing structures that still stand tall today!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "They took water technology to the next level, bringing fresh water right into their cities like magic!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Roman buildings were inspired by their Greek and Etruscan buddies, making them even more spectacular!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Roman Engineering travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Roman Engineering fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Roman Engineering?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Roman Engineering for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Roman Engineering."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Roman Engineering are fascinating",
+        "Learning about Roman Engineering is fun",
+        "There is always more to discover about Roman Engineering"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

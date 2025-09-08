@@ -1,0 +1,106 @@
+{
+  "slug": "earthquakes",
+  "title": "Earthquakes Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/earthquakes/hero.webp",
+    "alt": "A child on a hill, observing a colorful landscape with seismic waves in the background, symbolizing curiosity about earthquakes."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Earthquake",
+      "url": "https://en.wikipedia.org/wiki/Earthquake"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA20035"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Earthquakes",
+      "body": "Let's learn about Earthquakes. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Earthquakes play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Earthquakes?",
+      "body": "Earthquakes in a nutshell. Understanding the basics of Earthquakes helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Earthquakes."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Earthquakes",
+      "body": "More about Earthquakes. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Earthquakes. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Earthquakes can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Earthquakes truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Earthquakes can be like nature's rollercoaster, shaking things up from gentle wiggles to wild rides that toss objects into the air!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Some places are like earthquake party zones, having quakes all the time, while others might go years without a single shake!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that one time, a huge earthquake rumbled through Afghanistan, shaking the ground from a depth of 130 miles? That's like shaking a soda bottle from way down below!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Earthquakes travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Earthquakes fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Earthquakes?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Earthquakes for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Earthquakes."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Earthquakes are fascinating",
+        "Learning about Earthquakes is fun",
+        "There is always more to discover about Earthquakes"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "renewable-energy-wind-and-solar",
+  "title": "Renewable Energy (Wind & Solar) Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/renewable-energy-wind-and-solar/hero.webp",
+    "alt": "Children exploring renewable energy with a wind turbine and solar panels in a sunny landscape."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "StubSource",
+      "url": "https://example.com"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Renewable Energy (Wind & Solar)",
+      "body": "Let's learn about Renewable Energy (Wind & Solar). This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Renewable Energy (Wind & Solar) play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Renewable Energy (Wind & Solar)?",
+      "body": "Renewable Energy (Wind & Solar) in a nutshell. Understanding the basics of Renewable Energy (Wind & Solar) helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Renewable Energy (Wind & Solar)."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Renewable Energy (Wind & Solar)",
+      "body": "More about Renewable Energy (Wind & Solar). Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Renewable Energy (Wind & Solar). The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Renewable Energy (Wind & Solar) can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Renewable Energy (Wind & Solar) truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Did you know that wind turbines can be as tall as a 20-story building? That's a lot of wind power!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Solar panels can turn sunlight into electricity, even on cloudy days! They’re like magic windows!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Using wind and solar energy can help reduce pollution, making the air cleaner for everyone!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Renewable Energy (Wind & Solar) travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Renewable Energy (Wind & Solar) fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Renewable Energy (Wind & Solar)?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Renewable Energy (Wind & Solar) for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Renewable Energy (Wind & Solar)."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Renewable Energy (Wind & Solar) are fascinating",
+        "Learning about Renewable Energy (Wind & Solar) is fun",
+        "There is always more to discover about Renewable Energy (Wind & Solar)"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

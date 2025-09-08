@@ -1,0 +1,101 @@
+{
+  "slug": "coral-reefs",
+  "title": "Coral Reefs Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/coral-reefs/hero.webp",
+    "alt": "An illustrated underwater coral reef filled with colorful fish, sea turtles, and vibrant corals, showcasing the beauty of marine life."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Coral Reefs",
+      "url": "https://en.wikipedia.org/wiki/Coral_Reefs"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Coral Reefs",
+      "body": "Let's learn about Coral Reefs. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Coral Reefs play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Coral Reefs?",
+      "body": "Coral Reefs in a nutshell. Understanding the basics of Coral Reefs helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Coral Reefs."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Coral Reefs",
+      "body": "More about Coral Reefs. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Coral Reefs. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Coral Reefs can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Coral Reefs truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Did you know that coral reefs are like underwater kingdoms, full of colorful fish and plants?"
+        },
+        {
+          "sourceId": "s1",
+          "text": "The Coral Reefs journal has been around since 1982, helping scientists understand these magical places!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Morgan Pratchett, the editor-in-chief, is like the captain of this scientific ship, steering research on coral reefs!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Coral Reefs travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Coral Reefs fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Coral Reefs?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Coral Reefs for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Coral Reefs."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Coral Reefs are fascinating",
+        "Learning about Coral Reefs is fun",
+        "There is always more to discover about Coral Reefs"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

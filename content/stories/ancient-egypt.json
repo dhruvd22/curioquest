@@ -1,0 +1,106 @@
+{
+  "slug": "ancient-egypt",
+  "title": "Ancient Egypt Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/ancient-egypt/hero.webp",
+    "alt": "A child exploring an ancient Egyptian marketplace, filled with vibrant colors and pyramids in the background."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Ancient Egypt",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Egypt"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA23060"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Ancient Egypt",
+      "body": "Let's learn about Ancient Egypt. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Ancient Egypt play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Ancient Egypt?",
+      "body": "Ancient Egypt in a nutshell. Understanding the basics of Ancient Egypt helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Ancient Egypt."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Ancient Egypt",
+      "body": "More about Ancient Egypt. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Ancient Egypt. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Ancient Egypt can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Ancient Egypt truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Ancient Egypt was like a giant treasure chest, bursting with fascinating stories and incredible inventions, all along the winding Nile River!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Picture a time when one clever ruler named Menes brought together two lands, creating a powerful kingdom that would shine for thousands of years!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Luxor is like a giant outdoor museum where ancient temples and tombs whisper tales of pharaohs and gods, waiting for curious adventurers to explore!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Ancient Egypt travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Ancient Egypt fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Ancient Egypt?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Ancient Egypt for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Ancient Egypt."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Ancient Egypt are fascinating",
+        "Learning about Ancient Egypt is fun",
+        "There is always more to discover about Ancient Egypt"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

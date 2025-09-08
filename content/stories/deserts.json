@@ -1,0 +1,101 @@
+{
+  "slug": "deserts",
+  "title": "Deserts Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/deserts/hero.webp",
+    "alt": "A curious child exploring a vibrant desert landscape filled with cacti and sand dunes, discovering small creatures."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Desert",
+      "url": "https://en.wikipedia.org/wiki/Desert"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Deserts",
+      "body": "Let's learn about Deserts. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Deserts play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Deserts?",
+      "body": "Deserts in a nutshell. Understanding the basics of Deserts helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Deserts."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Deserts",
+      "body": "More about Deserts. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Deserts. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Deserts can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Deserts truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Deserts are like nature's playgrounds, covering about one-third of our planet's land!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "In deserts, the ground is often bare because there aren’t many plants to protect it."
+        },
+        {
+          "sourceId": "s1",
+          "text": "Believe it or not, some deserts are so chilly that they could be called 'cold deserts'!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Deserts travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Deserts fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Deserts?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Deserts for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Deserts."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Deserts are fascinating",
+        "Learning about Deserts is fun",
+        "There is always more to discover about Deserts"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

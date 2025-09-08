@@ -1,0 +1,101 @@
+{
+  "slug": "black-holes",
+  "title": "Black Holes Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/black-holes/hero.webp",
+    "alt": "A curious child in a space suit marvels at a swirling black hole surrounded by colorful stars and cosmic dust."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Black hole",
+      "url": "https://en.wikipedia.org/wiki/Black_hole"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Black Holes",
+      "body": "Let's learn about Black Holes. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Black Holes play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Black Holes?",
+      "body": "Black Holes in a nutshell. Understanding the basics of Black Holes helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Black Holes."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Black Holes",
+      "body": "More about Black Holes. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Black Holes. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Black Holes can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Black Holes truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "A black hole is like a cosmic vacuum cleaner, so strong that even light can’t escape its grasp!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Imagine a point in space where if you cross it, there's no turning back—that's the event horizon!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Black holes are like the ultimate hide-and-seek champions; they don’t reflect any light, making them invisible!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Black Holes travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Black Holes fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Black Holes?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Black Holes for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Black Holes."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Black Holes are fascinating",
+        "Learning about Black Holes is fun",
+        "There is always more to discover about Black Holes"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

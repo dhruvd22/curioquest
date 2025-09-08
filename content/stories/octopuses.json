@@ -1,0 +1,101 @@
+{
+  "slug": "octopuses",
+  "title": "Octopuses Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/octopuses/hero.webp",
+    "alt": "A friendly octopus swimming in a coral reef, surrounded by colorful sea creatures and a treasure chest."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Octopus",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Octopuses",
+      "body": "Let's learn about Octopuses. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Octopuses play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Octopuses?",
+      "body": "Octopuses in a nutshell. Understanding the basics of Octopuses helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Octopuses."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Octopuses",
+      "body": "More about Octopuses. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Octopuses. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Octopuses can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Octopuses truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Octopuses are like underwater superheroes with eight arms that can twist and turn in amazing ways!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Imagine being able to slip through the tiniest cracks—octopuses can do just that by changing their shape!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "When they swim, octopuses look like they’re dancing, trailing their arms behind them in a graceful wave!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Octopuses travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Octopuses fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Octopuses?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Octopuses for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Octopuses."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Octopuses are fascinating",
+        "Learning about Octopuses is fun",
+        "There is always more to discover about Octopuses"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

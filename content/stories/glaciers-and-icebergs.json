@@ -1,0 +1,101 @@
+{
+  "slug": "glaciers-and-icebergs",
+  "title": "Glaciers & Icebergs Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/glaciers-and-icebergs/hero.webp",
+    "alt": "A child marvels at a beautiful glacier and icebergs in a bright, colorful landscape."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-GSFC_20171208_Archive_e001867"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Glaciers & Icebergs",
+      "body": "Let's learn about Glaciers & Icebergs. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Glaciers & Icebergs play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Glaciers & Icebergs?",
+      "body": "Glaciers & Icebergs in a nutshell. Understanding the basics of Glaciers & Icebergs helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Glaciers & Icebergs."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Glaciers & Icebergs",
+      "body": "More about Glaciers & Icebergs. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Glaciers & Icebergs. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Glaciers & Icebergs can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Glaciers & Icebergs truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "The Pine Island Glacier is like a giant ice puzzle, with pieces breaking off to form icebergs!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "When the glacier cracks, it sends huge blocks of ice crashing into the sea, creating spectacular splashes!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "These glaciers can be over 18 miles long, making them some of the largest ice formations on Earth!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Glaciers & Icebergs travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Glaciers & Icebergs fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Glaciers & Icebergs?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Glaciers & Icebergs for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Glaciers & Icebergs."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Glaciers & Icebergs are fascinating",
+        "Learning about Glaciers & Icebergs is fun",
+        "There is always more to discover about Glaciers & Icebergs"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

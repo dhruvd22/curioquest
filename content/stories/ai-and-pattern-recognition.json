@@ -1,0 +1,101 @@
+{
+  "slug": "ai-and-pattern-recognition",
+  "title": "AI & Pattern Recognition Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/ai-and-pattern-recognition/hero.webp",
+    "alt": "A child exploring a colorful landscape filled with symbols of AI, surrounded by friendly robots and nature."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "StubSource",
+      "url": "https://example.com"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring AI & Pattern Recognition",
+      "body": "Let's learn about AI & Pattern Recognition. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, AI & Pattern Recognition play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are AI & Pattern Recognition?",
+      "body": "AI & Pattern Recognition in a nutshell. Understanding the basics of AI & Pattern Recognition helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about AI & Pattern Recognition."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into AI & Pattern Recognition",
+      "body": "More about AI & Pattern Recognition. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about AI & Pattern Recognition. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "AI & Pattern Recognition can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable AI & Pattern Recognition truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Did you know that AI can learn just like you? It looks at lots of examples to figure things out!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "AI uses pattern recognition to spot trends, like how you might notice your favorite ice cream flavor is always sold out on hot days!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Just like a detective, AI finds clues in data to solve mysteries, whether it’s predicting the weather or helping you choose the best video game!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do AI & Pattern Recognition travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are AI & Pattern Recognition fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore AI & Pattern Recognition?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using AI & Pattern Recognition for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by AI & Pattern Recognition."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "AI & Pattern Recognition are fascinating",
+        "Learning about AI & Pattern Recognition is fun",
+        "There is always more to discover about AI & Pattern Recognition"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

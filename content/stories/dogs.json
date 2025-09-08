@@ -1,0 +1,106 @@
+{
+  "slug": "dogs",
+  "title": "Dogs Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/dogs/hero.webp",
+    "alt": "A cheerful dog in a park with children, showcasing friendship and joy."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Dog",
+      "url": "https://en.wikipedia.org/wiki/Dog"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-KSC-20190710-PH_KLS02_0051"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Dogs",
+      "body": "Let's learn about Dogs. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Dogs play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Dogs?",
+      "body": "Dogs in a nutshell. Understanding the basics of Dogs helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Dogs."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Dogs",
+      "body": "More about Dogs. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Dogs. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Dogs can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Dogs truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Dogs are like the ultimate best friends! They were the first animals humans ever domesticated, way back over 14,000 years ago!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Thanks to their long history with us, dogs can chow down on all sorts of foods, even those that would puzzle other wild canines!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Some dogs are superstars in their own right! They work with NASA to help keep astronauts safe and sound!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Dogs travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Dogs fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Dogs?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Dogs for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Dogs."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Dogs are fascinating",
+        "Learning about Dogs is fun",
+        "There is always more to discover about Dogs"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

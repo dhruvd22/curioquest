@@ -1,0 +1,101 @@
+{
+  "slug": "whales",
+  "title": "Whales Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/whales/hero.webp",
+    "alt": "A blue whale swimming among coral reefs with dolphins, illustrated in vibrant watercolor and clean lines."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Whale",
+      "url": "https://en.wikipedia.org/wiki/Whale"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Whales",
+      "body": "Let's learn about Whales. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Whales play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Whales?",
+      "body": "Whales in a nutshell. Understanding the basics of Whales helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Whales."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Whales",
+      "body": "More about Whales. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Whales. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Whales can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Whales truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Whales are giant ocean mammals that come in all shapes and sizes, making them a super diverse group!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Did you know that dolphins and porpoises are part of the whale family? They’re like the fun cousins of the whale world!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Whales can be found in oceans all around the globe, from chilly Arctic waters to warm tropical seas!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Whales travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Whales fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Whales?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Whales for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Whales."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Whales are fascinating",
+        "Learning about Whales is fun",
+        "There is always more to discover about Whales"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

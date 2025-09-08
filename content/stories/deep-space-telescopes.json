@@ -1,0 +1,101 @@
+{
+  "slug": "deep-space-telescopes",
+  "title": "Deep Space Telescopes Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/deep-space-telescopes/hero.webp",
+    "alt": "A child looking through a telescope at a colorful night sky with galaxies and stars, surrounded by illustrations of deep space telescopes."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA23123"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Deep Space Telescopes",
+      "body": "Let's learn about Deep Space Telescopes. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Deep Space Telescopes play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Deep Space Telescopes?",
+      "body": "Deep Space Telescopes in a nutshell. Understanding the basics of Deep Space Telescopes helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Deep Space Telescopes."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Deep Space Telescopes",
+      "body": "More about Deep Space Telescopes. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Deep Space Telescopes. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Deep Space Telescopes can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Deep Space Telescopes truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "NASA's Spitzer Space Telescope lets us peek into a cosmic treasure chest filled with galaxies, some so faint they seem like whispers in the night!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "When Spitzer and Hubble team up, they create a dazzling cosmic dance, revealing galaxies that are millions of light-years away!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Imagine spotting a distant galaxy that’s been hidden for eons, finally shining brightly thanks to the magic of deep space telescopes!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Deep Space Telescopes travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Deep Space Telescopes fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Deep Space Telescopes?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Deep Space Telescopes for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Deep Space Telescopes."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Deep Space Telescopes are fascinating",
+        "Learning about Deep Space Telescopes is fun",
+        "There is always more to discover about Deep Space Telescopes"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

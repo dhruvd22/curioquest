@@ -1,0 +1,101 @@
+{
+  "slug": "elephants",
+  "title": "Elephants Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/elephants/hero.webp",
+    "alt": "A cheerful elephant in a colorful landscape, surrounded by flowers and small animals."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Elephant",
+      "url": "https://en.wikipedia.org/wiki/Elephant"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Elephants",
+      "body": "Let's learn about Elephants. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Elephants play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Elephants?",
+      "body": "Elephants in a nutshell. Understanding the basics of Elephants helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Elephants."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Elephants",
+      "body": "More about Elephants. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Elephants. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Elephants can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Elephants truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Elephants are the biggest land animals on Earth, towering over most other creatures!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "There are three types of elephants: the mighty African bush elephant, the shy African forest elephant, and the gentle Asian elephant."
+        },
+        {
+          "sourceId": "s1",
+          "text": "With their long trunks, elephants can pick up food, drink water, and even give each other a friendly hug!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Elephants travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Elephants fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Elephants?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Elephants for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Elephants."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Elephants are fascinating",
+        "Learning about Elephants is fun",
+        "There is always more to discover about Elephants"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

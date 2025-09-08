@@ -1,0 +1,106 @@
+{
+  "slug": "symmetry",
+  "title": "Symmetry Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/symmetry/hero.webp",
+    "alt": "A child exploring a colorful garden of symmetrical flowers, showcasing their vibrant patterns."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Symmetry",
+      "url": "https://en.wikipedia.org/wiki/Symmetry"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-PIA04375"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Symmetry",
+      "body": "Let's learn about Symmetry. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Symmetry play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Symmetry?",
+      "body": "Symmetry in a nutshell. Understanding the basics of Symmetry helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Symmetry."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Symmetry",
+      "body": "More about Symmetry. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Symmetry. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Symmetry can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Symmetry truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Symmetry makes the world feel balanced and beautiful, like a perfectly arranged flower garden!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "In math, symmetry means some shapes look the same even when you flip or turn them—like magic!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "Did you know that even in space, things can have symmetry? Just look at the amazing patterns in the stars!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Symmetry travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Symmetry fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Symmetry?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Symmetry for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Symmetry."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Symmetry are fascinating",
+        "Learning about Symmetry is fun",
+        "There is always more to discover about Symmetry"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

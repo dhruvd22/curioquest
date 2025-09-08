@@ -1,0 +1,106 @@
+{
+  "slug": "drones",
+  "title": "Drones Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/drones/hero.webp",
+    "alt": "Children in a park joyfully flying a colorful drone under a bright blue sky."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "Wikipedia: Drone",
+      "url": "https://en.wikipedia.org/wiki/Drone"
+    },
+    {
+      "id": "s2",
+      "name": "NASA Image",
+      "url": "https://images.nasa.gov/details-AFRC2025-0039-05"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Drones",
+      "body": "Let's learn about Drones. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Drones play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Drones?",
+      "body": "Drones in a nutshell. Understanding the basics of Drones helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Drones."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Drones",
+      "body": "More about Drones. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Drones. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Drones can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Drones truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s2",
+          "text": "Drones can help firefighters by flying high above wildfires, giving them a bird's-eye view of the flames!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "NASA's drones are like superheroes in the sky, gathering important weather data to keep us safe!"
+        },
+        {
+          "sourceId": "s2",
+          "text": "These flying machines can reach places that are too dangerous or hard for people to go!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Drones travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Drones fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Drones?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Drones for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Drones."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Drones are fascinating",
+        "Learning about Drones is fun",
+        "There is always more to discover about Drones"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}

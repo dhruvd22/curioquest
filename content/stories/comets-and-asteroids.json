@@ -1,0 +1,101 @@
+{
+  "slug": "comets-and-asteroids",
+  "title": "Comets & Asteroids Basics",
+  "ageBand": "10-13",
+  "readingLevel": "grade-6",
+  "estReadMin": 6,
+  "heroImage": {
+    "file": "/assets/comets-and-asteroids/hero.webp",
+    "alt": "A bright comet with colorful tails flying through a starry sky, surrounded by playful asteroids."
+  },
+  "supportImages": [],
+  "sources": [
+    {
+      "id": "s1",
+      "name": "StubSource",
+      "url": "https://example.com"
+    }
+  ],
+  "phases": [
+    {
+      "type": "hook",
+      "heading": "Exploring Comets & Asteroids",
+      "body": "Let's learn about Comets & Asteroids. This topic touches our everyday lives in ways we might not notice. From the moment we wake up until we go to sleep, Comets & Asteroids play a role in our world."
+    },
+    {
+      "type": "orientation",
+      "heading": "What are Comets & Asteroids?",
+      "body": "Comets & Asteroids in a nutshell. Understanding the basics of Comets & Asteroids helps us appreciate how they work and why they matter. With a little curiosity, we can uncover stories hidden in history, science, and art about Comets & Asteroids."
+    },
+    {
+      "type": "discovery",
+      "heading": "Digging into Comets & Asteroids",
+      "body": "More about Comets & Asteroids. Imagine walking through a museum, visiting a lab, or exploring outdoors—each place offers clues about Comets & Asteroids. The more we investigate, the more connections we find to technology, culture, and the natural world."
+    },
+    {
+      "type": "wow-panel",
+      "heading": "A wow moment",
+      "body": "Comets & Asteroids can be surprising! Sometimes a single fact can change how we think about the entire subject, showing just how remarkable Comets & Asteroids truly are."
+    },
+    {
+      "type": "fact-gems",
+      "items": [
+        {
+          "sourceId": "s1",
+          "text": "Comets are like cosmic snowballs, made of ice and dust, and they shine brightly when they get close to the sun!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Asteroids are rocky remnants from the early solar system, and they can be found hanging out in the asteroid belt between Mars and Jupiter!"
+        },
+        {
+          "sourceId": "s1",
+          "text": "Some comets take hundreds of years to complete their journey around the sun, making them rare visitors to our night sky!"
+        }
+      ]
+    },
+    {
+      "type": "mini-quiz",
+      "items": [
+        {
+          "q": "Where do Comets & Asteroids travel?",
+          "choices": [
+            "Space",
+            "Sea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Are Comets & Asteroids fast?",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Would you like to explore Comets & Asteroids?",
+          "choices": [
+            "Absolutely",
+            "Maybe later"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "type": "imagine",
+      "prompt": "Imagine using Comets & Asteroids for adventure. Picture yourself sharing amazing facts with friends or building a project inspired by Comets & Asteroids."
+    },
+    {
+      "type": "wrap",
+      "keyTakeaways": [
+        "Comets & Asteroids are fascinating",
+        "Learning about Comets & Asteroids is fun",
+        "There is always more to discover about Comets & Asteroids"
+      ]
+    }
+  ],
+  "badges": [],
+  "crossLinks": []
+}
