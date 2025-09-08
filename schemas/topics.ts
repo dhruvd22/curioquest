@@ -7,6 +7,6 @@ export const TopicSchema = z.object({
   badges: z.array(z.string()).optional(),
 });
 
-export const TopicsSchema = z.array(TopicSchema).min(1);
+export const TopicsSchema = z.array(TopicSchema);
 
 export type Topic = z.infer<typeof TopicSchema>;
