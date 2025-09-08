@@ -5,6 +5,17 @@ import { Agent, StoryInput, StoryDraft } from './_types';
 
 const TEMPS = [0.8, 0.95, 1.1];
 
+function normalizeFactGems(draft: StoryDraft, fallback: StoryInput['factGems']) {
+  for (const phase of draft.phases) {
+    if (phase.type === 'fact-gems') {
+      phase.items = phase.items.map((it: any, idx: number) => {
+        const text = it.text || it.claim || fallback[idx]?.text || '';
+        return { sourceId: it.sourceId || fallback[idx]?.sourceId || `s${idx + 1}`, text };
+      });
+    }
+  }
+}
+
 function makeFallbackDraft(topic: string, factGems: StoryInput['factGems']): StoryDraft {
   return {
     title: `${topic} Basics`,
@@ -65,10 +76,12 @@ export const StoryAgent: Agent<StoryInput, StoryDraft[]> = {
         if (start === -1 || end === -1) throw new Error('Missing JSON object');
         const jsonText = text.slice(start, end + 1);
         const draft = JSON.parse(jsonText);
+        normalizeFactGems(draft, factGems);
         drafts.push(draft);
         await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(draft, null, 2), 'utf8');
       } catch (err) {
         const fallback = makeFallbackDraft(topic, factGems);
+        normalizeFactGems(fallback, factGems);
         drafts.push(fallback);
         await fs.writeFile(`/tmp/${slug}/draft-${i + 1}.json`, JSON.stringify(fallback, null, 2), 'utf8');
       }
