@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "validate": "tsx scripts/validate-content.ts",
+    "validate": "tsx scripts/cleanup-content.ts && tsx scripts/validate-content.ts",
     "audit": "tsx scripts/audit-content.ts",
     "generate": "tsx scripts/generate/run-batch.ts",
     "generate:review": "tsx scripts/generate/run-batch.ts --all --images=skip --review-mode",
