@@ -128,24 +128,27 @@ Hero and support images live under `public/assets/<slug>/`. Use `--images=render
 Stories target grades 5–7 with inclusive language and clear structure. Each phase uses headings, quiz answers are explicit, images require alt text, and tone remains age‑appropriate.
 
 ## Deployment
-Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. If using `serverless.mjs` (e.g., `npm run runpod`), run the export script before starting the server.
+Run `npm run export` to output a fully static site in `out/`. Deploy with Vercel, Cloudflare Pages, Netlify, or any static file host. When running `serverless.mjs` directly (e.g., `npm run runpod`), generate `out/` first.
 
-For container deployments (e.g. Runpod), start `node serverless.mjs` after building. The app serves static files on `process.env.PORT` and a `/ping` health check on `process.env.PORT_HEALTH` for the load balancer.
+The included Dockerfile builds the site during the image build (`npm ci` followed by `npm run export`) and bundles `serverless.mjs`. The resulting container serves `out/` on `process.env.PORT` and exposes `/ping` on `process.env.PORT_HEALTH` when started with `node serverless.mjs`.
 
 ### RunPod Serverless
 To run CurioQuest on [RunPod](https://www.runpod.io/):
 
-1. **Build the static site**
+1. **Build and push the image**
+   The Dockerfile runs `npm ci` and `npm run export`, so no pre-built `out/` directory is required.
+   ```bash
+   docker build -t <registry-user>/curioquest:latest .
+   docker push <registry-user>/curioquest:latest
+   ```
+2. **Start the serverless handler**
+   RunPod injects `PORT` and `PORT_HEALTH`. For local testing outside Docker, generate `out/` then launch:
    ```bash
    npm install
    npm run export
-   ```
-2. **Start the serverless handler**  
-   RunPod injects `PORT` and `PORT_HEALTH`. For local testing:
-   ```bash
    RUNPOD_LOCAL=1 PORT=3000 PORT_HEALTH=3001 node serverless.mjs
    ```
-3. **Access the site**  
+3. **Access the site**
    After deployment open your endpoint URL, e.g. `https://js4f1ftbo81bhb.api.runpod.ai`, in a browser. The `/ping` path on the health port returns `200` for health checks.
 
 When deploying to RunPod you will receive two identifiers:
