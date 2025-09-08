@@ -1,5 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { v4 as uuid } from 'uuid';
+import { StorySchema } from '../../../schemas/story';
 import { Agent, PackagerInput, PackagerOutput } from './_types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'stories');
@@ -22,6 +24,13 @@ export const PackagerAgent: Agent<PackagerInput, PackagerOutput> = {
       badges: [],
       crossLinks: [],
     };
+    const parsed = StorySchema.safeParse(story);
+    if (!parsed.success) {
+      const rej = path.join(process.cwd(), '_rejects', `${slug}-${uuid()}.json`);
+      await fs.mkdir(path.dirname(rej), { recursive: true });
+      await fs.writeFile(rej, JSON.stringify({ story, errors: parsed.error.format() }, null, 2), 'utf8');
+      return { path: rej };
+    }
 
     let storyPath: string;
     if (reviewMode) {

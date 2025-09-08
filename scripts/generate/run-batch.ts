@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import mri from 'mri';
+import { Budget } from '../../lib/ai/budget';
 import { CuratorAgent } from './agents/curator';
 import { ResearchAgent } from './agents/research';
 import { OutlineAgent } from './agents/outline';
@@ -22,7 +23,7 @@ function log(...msg: any[]) {
 function stripQuotes(s: string) {
   return s.replace(/^['"]|['"]$/g, '');
 }
-function slugify(s: string) {
+export function slugify(s: string) {
   return s
     .toLowerCase()
     .normalize('NFKD')
@@ -47,7 +48,8 @@ async function runTopic(
   topic: string,
   force: boolean,
   imageMode: ImageMode,
-  reviewMode: boolean
+  reviewMode: boolean,
+  budget: Budget
 ): Promise<RunResult> {
   const slug = slugify(topic);
   const timings: Record<string, number> = {};
@@ -220,19 +222,20 @@ function displayProgress(records: RecordEntry[]) {
 async function main() {
   const argv = mri(process.argv.slice(2), {
     string: ['topic', 'images', 'concurrency', 'max-ms-per-topic', 'max-chars'],
-    boolean: ['force', 'review-mode', 'all'],
-    default: { images: 'skip', concurrency: '2', 'review-mode': true },
+    boolean: ['force', 'review-mode'],
+    default: { images: 'render', concurrency: '3', 'review-mode': false },
   });
 
   const force = !!argv.force;
   const all = !!argv.all;
   const imageMode = argv.images as ImageMode;
-  const concurrency = parseInt(argv.concurrency || '2', 10);
+  const concurrency = parseInt(argv.concurrency || '3', 10);
   const maxMsPerTopic = argv['max-ms-per-topic']
     ? parseInt(argv['max-ms-per-topic'], 10)
     : Infinity;
   const maxChars = argv['max-chars'] ? parseInt(argv['max-chars'], 10) : Infinity;
   const reviewMode = argv['review-mode'] as boolean;
+  const budget = new Budget();
 
   const topicFlags = Array.isArray(argv.topic)
     ? argv.topic
@@ -291,9 +294,9 @@ async function main() {
       displayProgress(records);
       const run =
         maxMsPerTopic === Infinity
-          ? await runTopic(current.topic, force, imageMode, reviewMode)
+          ? await runTopic(current.topic, force, imageMode, reviewMode, budget)
           : await Promise.race([
-              runTopic(current.topic, force, imageMode, reviewMode),
+              runTopic(current.topic, force, imageMode, reviewMode, budget),
               new Promise<RunResult>((resolve) =>
                 setTimeout(
                   () =>
@@ -357,6 +360,8 @@ async function main() {
 
   console.log('\nAgent timings (ms)');
   console.table(agentTotals);
+  console.log('\nBudget');
+  console.table({ spentUSD: budget.spentUSD(), remainingUSD: budget.remainingUSD() });
 }
 
 main().catch((e) => {

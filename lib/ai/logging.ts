@@ -1,17 +1,9 @@
-import fs from "node:fs/promises";
-import path from "node:path";
-
-const LOG_DIR = path.join(process.cwd(), ".ai_logs");
-
-export async function logCall(meta: {
-  model: string;
-  temperature: number;
-  input: number;
-  output: number;
-  ms: number;
-}) {
-  await fs.mkdir(LOG_DIR, { recursive: true });
-  const file = path.join(LOG_DIR, `${new Date().toISOString().slice(0,10)}.ndjson`);
-  const record = { timestamp: new Date().toISOString(), ...meta };
-  await fs.appendFile(file, JSON.stringify(record) + "\n");
+import fs from "node:fs/promises"; import path from "node:path";
+export async function logAI(event: any){
+  try{
+    const dir = path.join(process.cwd(), ".ai_logs");
+    await fs.mkdir(dir, { recursive: true });
+    const f = path.join(dir, `${new Date().toISOString().slice(0,10)}.ndjson`);
+    await fs.appendFile(f, JSON.stringify({ t:new Date().toISOString(), ...event })+"\n", "utf8");
+  }catch{}
 }
