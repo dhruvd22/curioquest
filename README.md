@@ -1,7 +1,11 @@
 # CurioQuest
 
 ## Project Overview
-CurioQuest is a browser‑first static site built with Next.js App Router and Tailwind. Stories are generated offline by a multi‑agent pipeline and saved as JSON and images so the site can serve engaging, kid‑friendly adventures without any runtime API cost.
+CurioQuest is a **browser‑first** static site built with Next.js App Router and Tailwind. Stories are generated offline by a multi‑agent pipeline and saved as JSON and images so the site can serve engaging, **kid‑friendly adventures** without any runtime API cost.
+
+<img width="1885" height="958" alt="image" src="https://github.com/user-attachments/assets/84e31a6c-d61d-46af-a829-5c49e641738c" />
+
+
 
 ## Features
 - Pre‑generation pipeline using multiple OpenAI agents
